@@ -14,7 +14,6 @@ This template is meticulously designed for building high-quality websites for mi
 - **Next.js App Router** – Modern routing with server components.
 - **Tailwind CSS v4** – Next-gen CSS engine with native variables.
 - **shadcn/ui** – Elegant UI components for a polished look.
-- **SEO & Socials** – Metadata helper (`lib/metadata.ts`) for beautiful event sharing on social media.
 - **Theming** – Support for light/dark modes, often useful for "mood" based event styles.
 - **Mobile First** – Designed to look great on guests' phones.
 
@@ -77,7 +76,6 @@ Set `FIXED_THEME` in `config/site.ts` to `'light'` or `'dark'` to lock the vibe,
 - `components/` – app components and examples
   - `components/ui/` – shared UI components (shadcn)
 - `config/site.ts` – site name/URL/description/social handles + SEO defaults
-- `lib/metadata.ts` – `createMetadata()` helper used by `app/layout.tsx`
 - `styles/globals.css` – Tailwind v4 entry + design tokens (light/dark)
 
 ## Technical Reference
