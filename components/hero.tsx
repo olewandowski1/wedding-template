@@ -52,14 +52,14 @@ export function Hero({ locked = false, cta }: HeroProps) {
                 transition={{ delay: 1, duration: 1 }}
                 className='mb-4 sm:mb-8'
               >
-                <p className='font-serif text-sm sm:text-lg md:text-xl tracking-[0.4em] sm:tracking-[0.5em] text-white/90 uppercase'>
+                <p className='font-serif text-sm sm:text-lg md:text-xl tracking-[0.4em] sm:tracking-[0.5em] text-white uppercase'>
                   Zaproszenie na ślub
                 </p>
               </motion.div>
             ) : null}
 
             <h1 className='select-none font-handwritten relative'>
-              <span className='text-4xl sm:text-5xl md:text-6xl lg:text-8xl leading-[0.8] text-white block drop-shadow-sm'>
+              <span className='text-4xl sm:text-5xl md:text-6xl lg:text-8xl leading-[0.8] text-white block drop-shadow-md'>
                 Marzena & Wojciech
               </span>
             </h1>
@@ -70,11 +70,11 @@ export function Hero({ locked = false, cta }: HeroProps) {
               transition={{ delay: 1.5, duration: 1 }}
               className='mt-8 sm:mt-12 flex flex-col items-center gap-4'
             >
-              <div className='h-px w-16 sm:w-24 bg-white/40' />
+              <div className='h-px w-16 sm:w-24 bg-white/60' />
               <p className='font-serif text-xl sm:text-3xl md:text-5xl tracking-[0.2em] text-white italic'>
                 20 Czerwca 2028 - Gdańsk
               </p>
-              <div className='h-px w-16 sm:w-24 bg-white/40' />
+              <div className='h-px w-16 sm:w-24 bg-white/60' />
             </motion.div>
 
             <motion.div

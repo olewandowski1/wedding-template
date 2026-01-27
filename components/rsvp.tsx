@@ -79,16 +79,16 @@ export function RSVP() {
           transition={{ duration: 1 }}
           className='mb-12 text-center md:mb-20'
         >
-          <span className='mb-2 block font-handwritten text-3xl text-foreground/40 md:mb-4 md:text-4xl'>
+          <span className='mb-2 block font-handwritten text-3xl text-foreground/50 md:mb-4 md:text-4xl'>
             Bądźcie z Nami
           </span>
           <h2 className='font-serif text-3xl font-light uppercase tracking-[0.2em] text-foreground md:text-7xl'>
             RSVP
           </h2>
           <div className='mt-8 flex justify-center'>
-            <div className='h-[1px] w-24 bg-foreground/10' />
+            <div className='h-[1px] w-24 bg-foreground/20' />
           </div>
-          <p className='mt-12 font-serif text-lg italic text-muted-foreground/80 md:text-xl'>
+          <p className='mt-12 font-serif text-lg italic text-foreground/70 md:text-xl'>
             Będzie nam bardzo miło, jeśli potwierdzisz swoją obecność do dnia
             20.04.2028.
           </p>
@@ -100,7 +100,7 @@ export function RSVP() {
           viewport={{ once: true }}
           transition={{ delay: 0.2, duration: 1 }}
         >
-          <Card className='overflow-hidden border-[0.5px] border-foreground/5 bg-background shadow-none rounded-none'>
+          <Card className='overflow-hidden border-[0.5px] border-foreground/15 bg-background shadow-none rounded-none'>
             <CardContent className='p-8 md:p-16'>
               {isSubmitted ? (
                 <motion.div
@@ -117,7 +117,7 @@ export function RSVP() {
                         stiffness: 200,
                         damping: 20,
                       }}
-                      className='flex h-24 w-24 items-center justify-center border-[0.5px] border-foreground/10 text-foreground'
+                      className='flex h-24 w-24 items-center justify-center border-[0.5px] border-foreground/20 text-foreground'
                     >
                       <svg
                         xmlns='http://www.w3.org/2000/svg'
@@ -139,7 +139,7 @@ export function RSVP() {
                     <h3 className='font-serif text-4xl font-light tracking-widest text-foreground'>
                       DZIĘKUJEMY!
                     </h3>
-                    <p className='font-serif text-xl italic text-muted-foreground'>
+                    <p className='font-serif text-xl italic text-foreground/70'>
                       Twoje potwierdzenie zostało wysłane.
                       <br />
                       Do zobaczenia w Gdańsku!

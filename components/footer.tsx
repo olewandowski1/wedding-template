@@ -30,11 +30,11 @@ export function Footer() {
         >
           {/* Logo / Signature */}
           <div className='mb-16'>
-            <span className='mb-[-0.6em] block font-handwritten text-7xl text-foreground/10 md:text-8xl'>
+            <span className='mb-[-0.6em] block font-handwritten text-7xl text-foreground/15 md:text-8xl'>
               M&W
             </span>
             <h2 className='font-serif text-3xl font-light uppercase tracking-[0.4em] text-foreground md:text-4xl'>
-              Marzena <span className='text-foreground/30 italic'>&</span>{' '}
+              Marzena <span className='text-foreground/50 italic'>&</span>{' '}
               Wojciech
             </h2>
           </div>
@@ -42,11 +42,11 @@ export function Footer() {
           {/* Date & Location */}
           <div className='mb-8 space-y-4'>
             <div className='flex items-center justify-center space-x-6'>
-              <div className='h-[1px] w-12 bg-foreground/10' />
-              <p className='text-[10px] font-bold uppercase tracking-[0.5em] text-foreground/40'>
+              <div className='h-[1px] w-12 bg-foreground/20' />
+              <p className='text-[10px] font-bold uppercase tracking-[0.5em] text-foreground/60'>
                 Gdańsk, Polska
               </p>
-              <div className='h-[0.5px] w-12 bg-foreground/10' />
+              <div className='h-[0.5px] w-12 bg-foreground/20' />
             </div>
           </div>
         </motion.div>

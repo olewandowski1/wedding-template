@@ -71,9 +71,9 @@ export function AccessGate({ unlockAction }: AccessGateProps) {
               <p className='font-handwritten text-3xl sm:text-4xl text-foreground/90'>
                 Marzena & Wojciech
               </p>
-              <div className='h-px w-24 bg-border/70' />
+              <div className='h-px w-24 bg-foreground/20' />
             </AlertDialogTitle>
-            <AlertDialogDescription className='text-sm text-muted-foreground text-left'>
+            <AlertDialogDescription className='text-sm text-foreground/70 text-left'>
               To prywatne zaproszenie. Proszę wprowadzić hasło, aby uzyskać
               dostęp do strony.{' '}
               <span className='font-semibold'>

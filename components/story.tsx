@@ -34,14 +34,14 @@ export function Story() {
             viewport={{ once: true }}
             transition={{ duration: 1 }}
           >
-            <span className='mb-2 block font-handwritten text-3xl text-foreground/40 md:mb-4 md:text-4xl'>
+            <span className='mb-2 block font-handwritten text-3xl text-foreground/50 md:mb-4 md:text-4xl'>
               Nasza Wspólna Droga
             </span>
             <h2 className='font-serif text-3xl font-light uppercase tracking-[0.2em] text-foreground md:text-7xl'>
               Nasza Historia
             </h2>
             <div className='mt-8 flex justify-center'>
-              <div className='h-[1px] w-24 bg-foreground/10' />
+              <div className='h-[1px] w-24 bg-foreground/20' />
             </div>
           </motion.div>
         </div>
@@ -86,7 +86,7 @@ export function Story() {
               className='relative space-y-10 text-center lg:text-left'
             >
               <div className='relative'>
-                <p className='font-serif text-3xl italic leading-relaxed text-foreground/80 md:text-4xl'>
+                <p className='font-serif text-3xl italic leading-relaxed text-foreground/90 md:text-4xl'>
                   "Od pierwszego spotkania nad brzegiem Motławy, po wspólną
                   drogę pełną pasji i marzeń..."
                 </p>
@@ -95,7 +95,7 @@ export function Story() {
                 </div>
               </div>
 
-              <div className='space-y-6 font-serif text-lg leading-relaxed text-muted-foreground'>
+              <div className='space-y-6 font-serif text-lg leading-relaxed text-foreground/70'>
                 <p>
                   Wszystko zaczęło się od przypadkowego spotkania, które z
                   czasem przerodziło się w najpiękniejszą przygodę naszego
@@ -124,8 +124,8 @@ export function Story() {
               <h3 className='font-serif text-3xl font-light uppercase tracking-widest text-foreground'>
                 Wspólna Przyszłość
               </h3>
-              <div className='mx-auto h-[1px] w-12 bg-foreground/20 lg:mx-0' />
-              <div className='space-y-6 font-serif text-lg leading-relaxed text-muted-foreground'>
+              <div className='mx-auto h-[1px] w-12 bg-foreground/30 lg:mx-0' />
+              <div className='space-y-6 font-serif text-lg leading-relaxed text-foreground/70'>
                 <p>
                   Zapraszamy Was do wspólnego świętowania dnia, w którym
                   wypowiemy sakramentalne "TAK". To dla nas ogromny zaszczyt, że

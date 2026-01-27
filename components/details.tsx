@@ -46,14 +46,14 @@ export function Details() {
           transition={{ duration: 1 }}
           className='mb-16 text-center md:mb-24'
         >
-          <span className='mb-2 block font-handwritten text-3xl text-foreground/40 md:mb-4 md:text-4xl'>
+          <span className='mb-2 block font-handwritten text-3xl text-foreground/50 md:mb-4 md:text-4xl'>
             Miejsce i Czas
           </span>
           <h2 className='font-serif text-3xl font-light uppercase tracking-[0.2em] text-foreground md:text-7xl'>
             Uroczystość
           </h2>
           <div className='mt-8 flex justify-center'>
-            <div className='h-[1px] w-24 bg-foreground/10' />
+            <div className='h-[1px] w-24 bg-foreground/20' />
           </div>
         </motion.div>
 
@@ -96,7 +96,7 @@ export function Details() {
                   {/* Decorative Frame */}
                   <div
                     className={cn(
-                      'absolute -z-10 h-full w-full border-[0.5px] border-foreground/10 transition-transform duration-700 group-hover:translate-x-2 group-hover:translate-y-2',
+                      'absolute -z-10 h-full w-full border-[0.5px] border-foreground/20 transition-transform duration-700 group-hover:translate-x-2 group-hover:translate-y-2',
                       index % 2 === 0 ? '-left-6 -top-6' : '-right-6 -bottom-6',
                     )}
                   />
@@ -120,16 +120,16 @@ export function Details() {
                   className='space-y-8 text-center lg:text-left'
                 >
                   <div className='space-y-4'>
-                    <div className='flex items-center space-x-4 text-foreground/30'>
+                    <div className='flex items-center space-x-4 text-foreground/50'>
                       <event.icon size={24} strokeWidth={1} />
-                      <div className='h-[1px] flex-1 bg-foreground/10 lg:block' />
+                      <div className='h-[1px] flex-1 bg-foreground/20 lg:block' />
                     </div>
                     <h3 className='font-serif text-3xl font-light uppercase tracking-widest text-foreground md:text-5xl'>
                       {event.title}
                     </h3>
                     <div className='flex items-center justify-center space-x-3 lg:justify-start'>
-                      <div className='h-[1px] w-8 bg-foreground/20' />
-                      <span className='font-serif text-3xl italic text-foreground/60 md:text-4xl'>
+                      <div className='h-[1px] w-8 bg-foreground/30' />
+                      <span className='font-serif text-3xl italic text-foreground/80 md:text-4xl'>
                         {event.time}
                       </span>
                     </div>
@@ -137,22 +137,22 @@ export function Details() {
 
                   <div className='space-y-6'>
                     <div className='space-y-2'>
-                      <div className='flex items-center justify-center space-x-2 text-foreground/80 lg:justify-start'>
+                      <div className='flex items-center justify-center space-x-2 text-foreground/90 lg:justify-start'>
                         <MapPin
                           size={18}
                           strokeWidth={1.5}
-                          className='text-foreground/40'
+                          className='text-foreground/50'
                         />
                         <span className='font-serif text-2xl italic'>
                           {event.location}
                         </span>
                       </div>
-                      <p className='text-[11px] uppercase tracking-[0.3em] text-muted-foreground'>
+                      <p className='text-[11px] uppercase tracking-[0.3em] text-foreground/60'>
                         {event.address}
                       </p>
                     </div>
 
-                    <p className='font-serif text-lg leading-relaxed text-muted-foreground/90 md:text-xl'>
+                    <p className='font-serif text-lg leading-relaxed text-foreground/70 md:text-xl'>
                       {event.description}
                     </p>
                   </div>

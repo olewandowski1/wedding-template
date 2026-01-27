@@ -146,10 +146,10 @@ export function Navigation() {
                   scrolled
                     ? isActive
                       ? 'text-foreground'
-                      : 'text-foreground/60 hover:text-foreground'
+                      : 'text-foreground/70 hover:text-foreground'
                     : isActive
                       ? 'text-white'
-                      : 'text-white/70 hover:text-white',
+                      : 'text-white/80 hover:text-white',
                 )}
               >
                 {route.name}
@@ -233,7 +233,7 @@ export function Navigation() {
                     className='group flex items-center justify-between font-serif text-xl tracking-[0.2em] text-foreground transition-all hover:opacity-60'
                   >
                     <span>{route.name}</span>
-                    <span className='text-xs uppercase tracking-[0.35em] text-foreground/50 group-hover:text-foreground/70'>
+                    <span className='text-xs uppercase tracking-[0.35em] text-foreground/70 group-hover:text-foreground/90'>
                       {String(index + 1).padStart(2, '0')}
                     </span>
                   </Link>

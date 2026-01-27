@@ -55,14 +55,14 @@ export function InfoSection() {
           transition={{ duration: 1 }}
           className='mb-16 text-center md:mb-24'
         >
-          <span className='mb-2 block font-handwritten text-3xl text-foreground/40 md:mb-4 md:text-4xl'>
+          <span className='mb-2 block font-handwritten text-3xl text-foreground/50 md:mb-4 md:text-4xl'>
             Ważne Wskazówki
           </span>
           <h2 className='font-serif text-3xl font-light uppercase tracking-[0.2em] text-foreground md:text-7xl'>
             Dla Gości
           </h2>
           <div className='mt-8 flex justify-center'>
-            <div className='h-[1px] w-24 bg-foreground/10' />
+            <div className='h-[1px] w-24 bg-foreground/20' />
           </div>
         </motion.div>
 
@@ -74,29 +74,29 @@ export function InfoSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.2, duration: 0.8 }}
-              className='group relative flex flex-col items-center bg-secondary/5 px-8 py-16 text-center transition-colors duration-500 hover:bg-secondary/10'
+              className='group relative flex flex-col items-center bg-secondary/10 px-8 py-16 text-center transition-all duration-500 hover:bg-secondary/15 hover:shadow-2xl hover:shadow-foreground/[0.02]'
             >
               {/* Decorative Frame for each item */}
-              <div className='absolute inset-4 border-[0.5px] border-foreground/5 transition-colors duration-500 group-hover:border-foreground/10' />
+              <div className='absolute inset-4 border-[0.5px] border-foreground/10 transition-colors duration-500 group-hover:border-foreground/20' />
 
               <div className='relative mb-10'>
-                <div className='flex h-16 w-16 items-center justify-center text-foreground/40 transition-all duration-700 group-hover:scale-110 group-hover:text-foreground'>
+                <div className='flex h-16 w-16 items-center justify-center text-foreground/60 transition-all duration-700 group-hover:scale-110 group-hover:text-foreground'>
                   <item.icon size={32} strokeWidth={1} />
                 </div>
                 {/* Subtle underline for icon */}
-                <div className='absolute -bottom-2 left-1/2 h-[1px] w-4 -translate-x-1/2 bg-foreground/10 transition-all duration-500 group-hover:w-12' />
+                <div className='absolute -bottom-2 left-1/2 h-[1px] w-4 -translate-x-1/2 bg-foreground/20 transition-all duration-500 group-hover:w-12' />
               </div>
 
               <h3 className='relative mb-6 font-serif text-2xl uppercase tracking-widest text-foreground'>
                 {item.title}
               </h3>
 
-              <p className='relative font-serif text-lg leading-relaxed text-muted-foreground/80 lg:text-xl'>
+              <p className='relative font-serif text-lg leading-relaxed text-foreground/70 lg:text-xl'>
                 {item.description}
               </p>
 
               {/* Bottom corner accents */}
-              <div className='absolute bottom-4 right-4 h-4 w-4 border-b-[0.5px] border-r-[0.5px] border-foreground/10 transition-colors duration-500 group-hover:border-foreground/30' />
+              <div className='absolute bottom-4 right-4 h-4 w-4 border-b-[0.5px] border-r-[0.5px] border-foreground/20 transition-colors duration-500 group-hover:border-foreground/40' />
             </motion.div>
           ))}
         </div>
