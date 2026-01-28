@@ -14,7 +14,9 @@ export function Navigation() {
     { name: t('home'), href: '#hero' },
     { name: t('story'), href: '#story' },
     { name: t('details'), href: '#details' },
+    { name: t('timeline'), href: '#timeline' },
     { name: t('info'), href: '#info' },
+    { name: t('gallery'), href: '#gallery' },
     { name: t('rsvp'), href: '#rsvp' },
   ];
   const [isOpen, setIsOpen] = React.useState(false);
@@ -129,18 +131,15 @@ export function Navigation() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.8, ease: 'easeOut' }}
-      className={cn(
-        'fixed top-0 z-50 w-full transition-all duration-700',
-        scrolled
-          ? 'bg-background/95 backdrop-blur-md py-4 sm:py-6'
-          : isOpen
-            ? 'bg-white py-4 sm:py-6'
-            : 'bg-transparent py-6 sm:py-10 md:py-16.5',
-      )}
+      className={cn('fixed top-0 z-50 w-full transition-all duration-700', {
+        'bg-background/95 backdrop-blur-md py-4 sm:py-6': scrolled,
+        'bg-white py-4 sm:py-6': !scrolled && isOpen,
+        'bg-transparent py-6 sm:py-10 md:py-16.5': !scrolled && !isOpen,
+      })}
     >
-      <div className='container mx-auto flex items-center justify-between px-6 md:px-12'>
+      <div className='container mx-auto flex items-center justify-end lg:justify-center px-6 md:px-12'>
         {/* Desktop Nav - Left */}
-        <div className='hidden items-center lg:flex space-x-12 lg:space-x-16'>
+        <div className='hidden items-center lg:flex space-x-8 xl:space-x-12'>
           {navRoutes.map((route) => {
             const isActive = activeSection === route.href.replace('#', '');
             return (
@@ -150,23 +149,23 @@ export function Navigation() {
                 onClick={(e) => scrollToSection(e, route.href)}
                 className={cn(
                   'relative text-[10px] font-medium uppercase tracking-[0.5em] transition-all duration-500',
-                  scrolled
-                    ? isActive
-                      ? 'text-foreground'
-                      : 'text-foreground/70 hover:text-foreground'
-                    : isActive
-                      ? 'text-white'
-                      : 'text-white/80 hover:text-white',
+                  {
+                    'text-foreground': scrolled && isActive,
+                    'text-foreground/70 hover:text-foreground':
+                      scrolled && !isActive,
+                    'text-white': !scrolled && isActive,
+                    'text-white/80 hover:text-white': !scrolled && !isActive,
+                  },
                 )}
               >
                 {route.name}
                 {isActive && (
                   <motion.span
                     layoutId='activeNav'
-                    className={cn(
-                      'absolute -bottom-2 left-0 h-px w-full',
-                      scrolled ? 'bg-foreground' : 'bg-white',
-                    )}
+                    className={cn('absolute -bottom-2 left-0 h-px w-full', {
+                      'bg-foreground': scrolled,
+                      'bg-white': !scrolled,
+                    })}
                     transition={{ type: 'spring', stiffness: 380, damping: 30 }}
                   />
                 )}
@@ -175,17 +174,8 @@ export function Navigation() {
           })}
         </div>
 
-        {/* Right side - Language Switcher (Desktop) and Mobile button */}
+        {/* Right side - Mobile button */}
         <div className='flex items-center gap-8'>
-          <div
-            className={cn(
-              'hidden lg:block transition-colors duration-500',
-              scrolled ? 'border-foreground/10' : 'border-white/10',
-            )}
-          >
-            <LanguageSwitcher scrolled={scrolled} />
-          </div>
-
           <div className='lg:hidden'>
             <button
               type='button'
@@ -197,25 +187,25 @@ export function Navigation() {
             >
               <div className='flex flex-col space-y-1.5'>
                 <span
-                  className={cn(
-                    'h-px w-6 transition-all',
-                    scrolled || isOpen ? 'bg-foreground' : 'bg-white',
-                    isOpen && 'translate-y-2 rotate-45',
-                  )}
+                  className={cn('h-px w-6 transition-all', {
+                    'bg-foreground': scrolled || isOpen,
+                    'bg-white': !scrolled && !isOpen,
+                    'translate-y-2 rotate-45': isOpen,
+                  })}
                 />
                 <span
-                  className={cn(
-                    'h-px w-6 transition-all',
-                    scrolled || isOpen ? 'bg-foreground' : 'bg-white',
-                    isOpen && 'opacity-0',
-                  )}
+                  className={cn('h-px w-6 transition-all', {
+                    'bg-foreground': scrolled || isOpen,
+                    'bg-white': !scrolled && !isOpen,
+                    'opacity-0': isOpen,
+                  })}
                 />
                 <span
-                  className={cn(
-                    'h-px w-6 transition-all',
-                    scrolled || isOpen ? 'bg-foreground' : 'bg-white',
-                    isOpen && '-translate-y-2 -rotate-45',
-                  )}
+                  className={cn('h-px w-6 transition-all', {
+                    'bg-foreground': scrolled || isOpen,
+                    'bg-white': !scrolled && !isOpen,
+                    '-translate-y-2 -rotate-45': isOpen,
+                  })}
                 />
               </div>
             </button>

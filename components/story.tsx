@@ -10,7 +10,7 @@ export function Story() {
   return (
     <section
       id='story'
-      className='relative overflow-hidden bg-background pt-20 md:pt-32'
+      className='relative overflow-x-hidden bg-background pt-20 md:pt-32'
     >
       {/* Background Decor - Subtle texture or shapes if needed, but keeping it clean for premium feel */}
       <div className='absolute left-0 top-0 h-full w-full opacity-[0.03] pointer-events-none'>
@@ -50,7 +50,7 @@ export function Story() {
         </div>
 
         {/* Main Content - Asymmetrical Layout */}
-        <div className='grid gap-24 lg:grid-cols-12 lg:items-center'>
+        <div className='grid gap-16 lg:grid-cols-12 lg:items-center lg:gap-24'>
           {/* Left Column - Image with Frame */}
           <div className='lg:col-span-6'>
             <motion.div
@@ -58,24 +58,27 @@ export function Story() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-100px' }}
               transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-              className='group relative mx-auto'
+              className='group relative z-10 mx-auto max-w-2xl lg:max-w-none'
             >
-              <div className='relative aspect-[16/10] overflow-hidden rounded-sm bg-secondary/10'>
+              <div className='relative aspect-[4/3] overflow-hidden rounded-sm bg-secondary/10 md:aspect-[16/10]'>
                 <motion.div
                   initial={{ scale: 1.2 }}
                   whileInView={{ scale: 1 }}
                   transition={{ duration: 2, ease: [0.22, 1, 0.36, 1] }}
-                  className='h-full w-full'
+                  className='relative h-full w-full'
                 >
                   <Image
                     src='/images/6.jpg'
                     alt={t('imageAlt1')}
                     fill
+                    sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
                     className='object-cover transition-transform duration-[2s] group-hover:scale-110'
                   />
                 </motion.div>
                 <div className='absolute inset-0 bg-black/5 transition-opacity group-hover:opacity-0' />
               </div>
+              {/* Decorative Frame */}
+              <div className='absolute -left-4 -top-4 -z-10 h-full w-full border-[0.5px] border-foreground/20 transition-transform duration-700 group-hover:translate-x-2 group-hover:translate-y-2 md:-left-8 md:-top-8' />
             </motion.div>
           </div>
 
@@ -86,18 +89,18 @@ export function Story() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3, duration: 1 }}
-              className='relative space-y-10 text-center lg:text-left'
+              className='relative space-y-8 text-center lg:pl-12 lg:text-left xl:pl-20'
             >
               <div className='relative'>
-                <p className='font-serif text-3xl italic leading-relaxed text-foreground/90 md:text-4xl'>
+                <p className='font-serif text-2xl italic leading-relaxed text-foreground/90 md:text-3xl lg:text-4xl'>
                   &ldquo;{t('quote')}&rdquo;
                 </p>
-                <div className='absolute -left-8 top-0 hidden font-serif text-8xl text-foreground/5 lg:block'>
+                <div className='absolute -left-12 -top-6 hidden font-serif text-[120px] leading-none text-foreground/[0.03] lg:block xl:-left-16'>
                   &ldquo;
                 </div>
               </div>
 
-              <div className='space-y-6 font-serif text-lg leading-relaxed text-foreground/70'>
+              <div className='space-y-6 font-serif text-base leading-relaxed text-foreground/70 md:text-lg'>
                 <p>{t('historyParagraph1')}</p>
                 <p>{t('historyParagraph2')}</p>
               </div>
@@ -106,52 +109,55 @@ export function Story() {
         </div>
 
         {/* Second Row - Reversed */}
-        <div className='mt-16 md:mt-24 grid gap-24 lg:grid-cols-12 lg:items-center'>
-          <div className='order-2 lg:col-span-6 lg:order-1'>
+        <div className='mt-24 grid gap-16 lg:grid-cols-12 lg:items-center lg:gap-24 xl:mt-32'>
+          <div className='order-2 lg:col-span-5 lg:order-1 xl:col-span-6'>
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3, duration: 1 }}
-              className='space-y-8 text-center lg:text-left'
+              className='space-y-8 text-center lg:pr-12 lg:text-left xl:pr-20'
             >
-              <h3 className='font-serif text-3xl font-light uppercase tracking-widest text-foreground'>
-                {t('futureTitle')}
-              </h3>
-              <div className='mx-auto h-[1px] w-12 bg-foreground/30 lg:mx-0' />
-              <div className='space-y-6 font-serif text-lg leading-relaxed text-foreground/70'>
+              <div className='space-y-4'>
+                <h3 className='font-serif text-2xl font-light uppercase tracking-widest text-foreground md:text-3xl'>
+                  {t('futureTitle')}
+                </h3>
+                <div className='mx-auto h-[1px] w-12 bg-foreground/30 lg:mx-0' />
+              </div>
+              <div className='space-y-6 font-serif text-base leading-relaxed text-foreground/70 md:text-lg'>
                 <p>{t('futureParagraph1')}</p>
                 <p>{t('futureParagraph2')}</p>
               </div>
             </motion.div>
           </div>
 
-          <div className='order-1 lg:col-span-6 lg:order-2'>
+          <div className='order-1 lg:col-span-7 lg:order-2 xl:col-span-6'>
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-100px' }}
               transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-              className='group relative'
+              className='group relative z-10 mx-auto max-w-2xl lg:max-w-none'
             >
-              <div className='relative mx-auto aspect-[16/10] overflow-hidden rounded-sm bg-secondary/10'>
+              <div className='relative z-10 aspect-[4/3] overflow-hidden rounded-sm bg-secondary/10 md:aspect-[16/10]'>
                 <motion.div
                   initial={{ scale: 1.2 }}
                   whileInView={{ scale: 1 }}
                   transition={{ duration: 2, ease: [0.22, 1, 0.36, 1] }}
-                  className='h-full w-full'
+                  className='relative h-full w-full'
                 >
                   <Image
                     src='/images/1.jpg'
                     alt={t('imageAlt2')}
                     fill
+                    sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
                     className='object-cover transition-transform duration-[2s] group-hover:scale-110'
                   />
                 </motion.div>
                 <div className='absolute inset-0 bg-black/5 transition-opacity group-hover:opacity-0' />
               </div>
               {/* Decorative Frame */}
-              <div className='absolute -right-6 -bottom-6 -z-10 h-full w-full border-[0.5px] border-foreground/10 transition-transform duration-700 group-hover:translate-x-[-8px] group-hover:translate-y-[-8px]' />
+              <div className='absolute -bottom-4 -right-4 -z-10 h-full w-full border-[0.5px] border-foreground/20 transition-transform duration-700 group-hover:-translate-x-2 group-hover:-translate-y-2 md:-bottom-8 md:-right-8' />
             </motion.div>
           </div>
         </div>

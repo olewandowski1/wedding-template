@@ -33,7 +33,7 @@ export function Details() {
   return (
     <section
       id='details'
-      className='relative overflow-hidden bg-secondary/10 pt-20 md:pt-32'
+      className='relative overflow-x-hidden bg-secondary/10 pt-20 md:pt-32'
     >
       {/* Delicate background accent */}
       <div className='absolute right-0 top-0 h-64 w-64 translate-x-1/2 -translate-y-1/2 rounded-full bg-foreground/5 blur-3xl' />
@@ -66,29 +66,30 @@ export function Details() {
             >
               {/* Image Column */}
               <div
-                className={cn(
-                  'lg:col-span-7',
-                  index % 2 === 0 ? 'lg:order-1' : 'lg:order-2',
-                )}
+                className={cn('lg:col-span-7', {
+                  'lg:order-1': index % 2 === 0,
+                  'lg:order-2': index % 2 !== 0,
+                })}
               >
                 <motion.div
                   initial={{ opacity: 0, y: 40 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: '-100px' }}
                   transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-                  className='group relative'
+                  className='group relative z-10'
                 >
                   <div className='relative aspect-[16/10] overflow-hidden rounded-sm bg-background'>
                     <motion.div
                       initial={{ scale: 1.2 }}
                       whileInView={{ scale: 1 }}
                       transition={{ duration: 2, ease: [0.22, 1, 0.36, 1] }}
-                      className='h-full w-full'
+                      className='relative h-full w-full'
                     >
                       <Image
                         src={event.image}
                         alt={event.location}
                         fill
+                        sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
                         className='object-cover transition-transform duration-[2s] group-hover:scale-110'
                       />
                     </motion.div>
@@ -98,7 +99,10 @@ export function Details() {
                   <div
                     className={cn(
                       'absolute -z-10 h-full w-full border-[0.5px] border-foreground/20 transition-transform duration-700 group-hover:translate-x-2 group-hover:translate-y-2',
-                      index % 2 === 0 ? '-left-6 -top-6' : '-right-6 -bottom-6',
+                      {
+                        '-left-6 -top-6': index % 2 === 0,
+                        '-right-6 -bottom-6': index % 2 !== 0,
+                      },
                     )}
                   />
                 </motion.div>
@@ -106,12 +110,10 @@ export function Details() {
 
               {/* Content Column */}
               <div
-                className={cn(
-                  'lg:col-span-5',
-                  index % 2 === 0
-                    ? 'lg:order-2 lg:pl-12'
-                    : 'lg:order-1 lg:pr-12',
-                )}
+                className={cn('lg:col-span-5', {
+                  'lg:order-2 lg:pl-12': index % 2 === 0,
+                  'lg:order-1 lg:pr-12': index % 2 !== 0,
+                })}
               >
                 <motion.div
                   initial={{ opacity: 0, x: index % 2 === 0 ? 20 : -20 }}

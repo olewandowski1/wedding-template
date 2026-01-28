@@ -5,6 +5,7 @@ import { motion } from 'motion/react';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { Button } from '@/components/ui/button';
+import { LanguageSwitcher } from './language-switcher';
 
 type HeroProps = {
   locked?: boolean;
@@ -32,6 +33,7 @@ export function Hero({ locked = false, cta }: HeroProps) {
           src='/images/9.jpg'
           alt='Wedding Background'
           fill
+          sizes='100vw'
           className='object-cover object-center transition-transform duration-[10s] hover:scale-110'
           priority
         />
@@ -84,7 +86,7 @@ export function Hero({ locked = false, cta }: HeroProps) {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 2, duration: 1 }}
-              className='mt-16'
+              className='mt-16 flex flex-col items-center gap-4 xl:gap-8'
             >
               {cta ? (
                 cta
@@ -92,7 +94,7 @@ export function Hero({ locked = false, cta }: HeroProps) {
                 <Button
                   variant='outline'
                   size='lg'
-                  className='bg-transparent text-white border-white hover:bg-white hover:text-black rounded-none px-12 py-6 text-sm tracking-wide uppercase transition-all duration-500'
+                  className='bg-transparent text-white border-white hover:bg-white hover:text-black rounded-none px-8 py-4 text-xs tracking-widest uppercase transition-all duration-500 md:px-12 md:py-6 md:text-sm'
                   onClick={() =>
                     document
                       .getElementById('rsvp')
@@ -102,6 +104,10 @@ export function Hero({ locked = false, cta }: HeroProps) {
                   {t('rsvp')}
                 </Button>
               )}
+
+              <div className='justify-center hidden lg:flex'>
+                <LanguageSwitcher scrolled={false} />
+              </div>
             </motion.div>
           </motion.div>
         </div>

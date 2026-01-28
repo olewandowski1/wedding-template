@@ -31,7 +31,10 @@ export function LanguageSwitcher({ scrolled }: { scrolled?: boolean }) {
     <div
       className={cn(
         'flex items-center text-[10px] font-medium tracking-[0.5em] transition-colors duration-500',
-        scrolled ? 'text-foreground' : 'text-white',
+        {
+          'text-foreground': scrolled,
+          'text-white': !scrolled,
+        },
       )}
       role='navigation'
       aria-label={t('label')}
@@ -44,9 +47,10 @@ export function LanguageSwitcher({ scrolled }: { scrolled?: boolean }) {
               disabled={isPending}
               className={cn(
                 'group relative py-1 transition-all duration-700 focus:outline-none',
-                locale === lang.code
-                  ? 'opacity-100'
-                  : 'opacity-30 hover:opacity-60',
+                {
+                  'opacity-100': locale === lang.code,
+                  'opacity-30 hover:opacity-60': locale !== lang.code,
+                },
               )}
               title={t(lang.code as any)}
             >
@@ -56,7 +60,10 @@ export function LanguageSwitcher({ scrolled }: { scrolled?: boolean }) {
                   layoutId='lang-active-underline'
                   className={cn(
                     'absolute bottom-0 left-0 h-px w-full origin-left',
-                    scrolled ? 'bg-foreground' : 'bg-white',
+                    {
+                      'bg-foreground': scrolled,
+                      'bg-white': !scrolled,
+                    },
                   )}
                   initial={{ scaleX: 0 }}
                   animate={{ scaleX: 1 }}
@@ -66,10 +73,10 @@ export function LanguageSwitcher({ scrolled }: { scrolled?: boolean }) {
             </button>
             {index < languages.length - 1 && (
               <span
-                className={cn(
-                  'h-3 w-[1px] opacity-10',
-                  scrolled ? 'bg-foreground' : 'bg-white',
-                )}
+                className={cn('h-3 w-[1px] opacity-10', {
+                  'bg-foreground': scrolled,
+                  'bg-white': !scrolled,
+                })}
               />
             )}
           </div>

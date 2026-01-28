@@ -61,7 +61,7 @@ export function AccessGate({ unlockAction }: AccessGateProps) {
         <Button
           variant='outline'
           size='lg'
-          className='bg-transparent text-white border-white hover:bg-white hover:text-black rounded-none px-12 py-6 text-sm tracking-wide uppercase transition-all duration-500'
+          className='bg-transparent text-white border-white hover:bg-white hover:text-black rounded-none px-8 py-4 text-xs tracking-widest uppercase transition-all duration-500 md:px-12 md:py-6 md:text-sm'
         >
           {t('trigger')}
         </Button>

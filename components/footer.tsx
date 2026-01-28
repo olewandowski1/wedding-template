@@ -37,10 +37,10 @@ export function Footer() {
         >
           {/* Logo / Signature */}
           <div className='mb-16'>
-            <span className='mb-[-0.6em] block font-handwritten text-7xl text-foreground/15 md:text-8xl'>
+            <span className='mb-[-0.6em] block font-handwritten text-6xl text-foreground/15 md:text-8xl'>
               {initial1}&{initial2}
             </span>
-            <h2 className='font-serif text-3xl font-light uppercase tracking-[0.4em] text-foreground md:text-4xl'>
+            <h2 className='font-serif text-xl font-light uppercase tracking-[0.3em] text-foreground md:text-4xl md:tracking-[0.4em]'>
               {t('names')}
             </h2>
           </div>

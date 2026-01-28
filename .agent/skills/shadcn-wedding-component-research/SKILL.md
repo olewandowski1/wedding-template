@@ -59,16 +59,11 @@ This is a **planning-only skill**.
 
 ## Component Sources
 
-The researcher MAY use:
+The researcher MUST prioritize:
 
-- shadcn/ui components
-- External UI / layout block registries (e.g. Tailark)
-
-External blocks may be installed and adapted as needed, provided they:
-
-- Respect performance constraints
-- Do not assume public or marketing usage
-- Can be adapted to a wedding context
+- **Existing Template Components**: Found in `@/components/` (e.g., `hero.tsx`, `story.tsx`, `details.tsx`, `timeline.tsx`, `gallery.tsx`, `rsvp.tsx`, `access-gate.tsx`). These should be adapted/configured rather than replaced.
+- **shadcn/ui components**: Found in `@/components/ui/` for building blocks.
+- **External Block Registries**: Only if a required section is missing from the template.
 
 ---
 
@@ -131,6 +126,7 @@ The `IMPLEMENTATION-PLAN.md` file MUST include the following sections:
 - Semantic HTML structure (`header`, `main`, `section`, `footer`)
 - Privacy and access considerations (including QR-Pass-Through tokens)
 - Theme and vibe alignment
+- i18n Strategy (using `next-intl` and `messages/*.json`)
 - Motion usage strategy (restraint encouraged)
 
 ---

@@ -14,7 +14,9 @@ export const siteConfig = {
     { name: 'Start', href: '#hero' },
     { name: 'Nasza Historia', href: '#story' },
     { name: 'Szczegóły', href: '#details' },
+    { name: 'Harmonogram', href: '#timeline' },
     { name: 'Informacje', href: '#info' },
+    { name: 'Galeria', href: '#gallery' },
     { name: 'RSVP', href: '#rsvp' },
   ],
 } as const;

@@ -70,13 +70,21 @@ Before writing any code, the builder MUST:
 ### Custom Components
 
 - ALL custom components MUST live in: `@/components`
-- No additional component directories may be created
+- **Prioritize Template Components**: Use and adapt existing components from `@/components/` (Hero, Story, Details, Timeline, InfoSection, FAQ, Gallery, RSVP, AccessGate, Navigation).
+- **i18n Implementation**: NEVER hardcode text in components. Use `useTranslations` from `next-intl` and store all strings in `messages/pl.json` and `messages/en.json`.
+- No additional component directories may be created.
 - **Check existing primitives**: Before creating a new UI component, check `@/components/ui` for existing bespoke primitives (e.g., `field.tsx`, `input-group.tsx`).
 
 ### shadcn/ui Components
 
 - MUST live in: `@/components/ui`
-- Do NOT modify internals unless explicitly required by the plan
+- Do NOT modify internals unless explicitly required by the plan.
+
+### Page Assembly
+
+- The main page structure is defined in `app/(main)/page.tsx`.
+- Orchestrate sections by importing from `@/components`.
+- Handle the `AccessGate` logic with `cookies` and `Server Actions` as shown in the template.
 
 ---
 

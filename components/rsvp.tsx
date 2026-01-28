@@ -226,9 +226,12 @@ export function RSVP() {
                                 <div
                                   className={cn(
                                     'flex h-6 w-6 items-center justify-center border-[0.5px] transition-all duration-300',
-                                    field.value === 'yes'
-                                      ? 'bg-foreground border-foreground text-background'
-                                      : 'border-foreground/20 bg-transparent',
+                                    {
+                                      'bg-foreground border-foreground text-background':
+                                        field.value === 'yes',
+                                      'border-foreground/20 bg-transparent':
+                                        field.value !== 'yes',
+                                    },
                                   )}
                                 >
                                   {field.value === 'yes' && (
@@ -250,9 +253,11 @@ export function RSVP() {
                                 <span
                                   className={cn(
                                     'font-serif text-lg transition-colors',
-                                    field.value === 'yes'
-                                      ? 'text-foreground'
-                                      : 'text-muted-foreground group-hover:text-foreground/60',
+                                    {
+                                      'text-foreground': field.value === 'yes',
+                                      'text-muted-foreground group-hover:text-foreground/60':
+                                        field.value !== 'yes',
+                                    },
                                   )}
                                 >
                                   {t('form.attendanceYes')}
@@ -267,9 +272,12 @@ export function RSVP() {
                                 <div
                                   className={cn(
                                     'flex h-6 w-6 items-center justify-center border-[0.5px] transition-all duration-300',
-                                    field.value === 'no'
-                                      ? 'bg-foreground border-foreground text-background'
-                                      : 'border-foreground/20 bg-transparent',
+                                    {
+                                      'bg-foreground border-foreground text-background':
+                                        field.value === 'no',
+                                      'border-foreground/20 bg-transparent':
+                                        field.value !== 'no',
+                                    },
                                   )}
                                 >
                                   {field.value === 'no' && (
@@ -291,9 +299,11 @@ export function RSVP() {
                                 <span
                                   className={cn(
                                     'font-serif text-lg transition-colors',
-                                    field.value === 'no'
-                                      ? 'text-foreground'
-                                      : 'text-muted-foreground group-hover:text-foreground/60',
+                                    {
+                                      'text-foreground': field.value === 'no',
+                                      'text-muted-foreground group-hover:text-foreground/60':
+                                        field.value !== 'no',
+                                    },
                                   )}
                                 >
                                   {t('form.attendanceNo')}
@@ -352,7 +362,7 @@ export function RSVP() {
                   <div className='flex justify-center pt-6'>
                     <Button
                       type='submit'
-                      className='group relative overflow-hidden rounded-none border border-foreground bg-foreground px-12 py-8 text-xs font-bold uppercase tracking-[0.1em] text-background transition-all hover:bg-transparent hover:text-foreground'
+                      className='group relative overflow-hidden rounded-none border border-foreground bg-foreground px-8 py-6 text-[10px] font-bold uppercase tracking-[0.2em] text-background transition-all hover:bg-transparent hover:text-foreground md:px-12 md:py-8 md:text-xs'
                     >
                       {t('form.submitButton')}
                     </Button>

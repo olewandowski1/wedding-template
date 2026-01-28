@@ -9,6 +9,9 @@ import { InfoSection } from '@/components/info-section';
 import { Navigation } from '@/components/navigation';
 import { RSVP } from '@/components/rsvp';
 import { Story } from '@/components/story';
+import { Timeline } from '@/components/timeline';
+import { Gallery } from '@/components/gallery';
+import { FAQ } from '@/components/faq';
 
 type UnlockState = {
   status: 'idle' | 'error' | 'success';
@@ -203,7 +206,10 @@ export default async function Page() {
         <Hero />
         <Story />
         <Details />
+        <Timeline />
         <InfoSection />
+        <FAQ />
+        <Gallery />
         <RSVP />
       </main>
       <Footer />

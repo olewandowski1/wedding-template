@@ -54,8 +54,76 @@
     "home": "Start",
     "story": "Nasza Historia",
     "details": "Szczegóły",
+    "timeline": "Harmonogram",
     "info": "Informacje",
+    "gallery": "Galeria",
     "rsvp": "RSVP"
+  },
+  "Timeline": {
+    "headerSubtitle": "Przebieg Dnia",
+    "headerTitle": "Plan Wesela",
+    "items": {
+      "ceremony": {
+        "time": "16:00",
+        "title": "Ceremonia Zaślubin",
+        "description": "Uroczysta msza św. w Bazylice Mariackiej."
+      },
+      "reception": {
+        "time": "18:00",
+        "title": "Przywitanie Gości",
+        "description": "Przyjazd do Dworu Artusa i toast powitalny."
+      },
+      "dinner": {
+        "time": "19:00",
+        "title": "Obiad Weselny",
+        "description": "Uroczysta kolacja serwowana do stołów."
+      },
+      "party": {
+        "time": "20:30",
+        "title": "Zabawa Taneczna",
+        "description": "Rozpoczęcie tańców i wspólna zabawa."
+      },
+      "cake": {
+        "time": "22:00",
+        "title": "Tort Weselny",
+        "description": "Uroczyste krojenie tortu."
+      },
+      "midnight": {
+        "time": "00:00",
+        "title": "Oczepiny",
+        "description": "Tradycyjne polskie zabawy weselne."
+      }
+    }
+  },
+  "Gallery": {
+    "headerSubtitle": "Wspomnienia",
+    "headerTitle": "Nasze Zdjęcia",
+    "description": "Chcielibyśmy zachować te chwile na zawsze. Będzie nam miło, jeśli podzielicie się z nami swoimi zdjęciami z tego dnia!",
+    "descriptionExtra": "Pomóżcie nam uwiecznić te piękne chwile. Wszystkie zdjęcia, które wykonacie podczas wesela, możecie udostępnić w naszym wspólnym albumie.",
+    "cta": "Google Drive",
+    "sideLabel": "Cyfrowe Wspomnienia • Na Zawsze"
+  },
+  "FAQ": {
+    "headerSubtitle": "Częste Pytania",
+    "headerTitle": "Dowiedz się więcej",
+    "questions": {
+      "accommodation": {
+        "q": "Czy zapewniacie nocleg?",
+        "a": "Dla gości spoza Trójmiasta polecamy hotele w pobliżu Dworu Artusa. Chętnie pomożemy w dokonaniu rezerwacji."
+      },
+      "transport": {
+        "q": "Jak dojechać z kościoła na salę?",
+        "a": "Kościół i sala weselna znajdują się w odległości krótkiego spaceru (ok. 5 minut) przez historyczne centrum Gdańska."
+      },
+      "children": {
+        "q": "Czy dzieci są zaproszone?",
+        "a": "Zapraszamy wszystkich gości wymienionych na zaproszeniach. Jeśli Twoje zaproszenie obejmuje dzieci, będą one bardzo mile widziane!"
+      },
+      "parking": {
+        "q": "Gdzie zaparkować samochód?",
+        "a": "Dwór Artusa znajduje się w strefie pieszej. Rekomendujemy parkingi przy ul. Ogarna lub w pobliżu Forum Gdańsk."
+      }
+    }
   },
   "RSVP": {
     "headerSubtitle": "Bądźcie z Nami",

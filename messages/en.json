@@ -54,8 +54,76 @@
     "home": "Home",
     "story": "Our Story",
     "details": "Details",
+    "timeline": "Schedule",
     "info": "Information",
+    "gallery": "Gallery",
     "rsvp": "RSVP"
+  },
+  "Timeline": {
+    "headerSubtitle": "Flow of the Day",
+    "headerTitle": "Wedding Plan",
+    "items": {
+      "ceremony": {
+        "time": "16:00",
+        "title": "Wedding Ceremony",
+        "description": "Solemn Mass at St. Mary's Basilica."
+      },
+      "reception": {
+        "time": "18:00",
+        "title": "Guest Welcome",
+        "description": "Arrival at Artus Court and opening toast."
+      },
+      "dinner": {
+        "time": "19:00",
+        "title": "Wedding Dinner",
+        "description": "Festive dinner served at the tables."
+      },
+      "party": {
+        "time": "20:30",
+        "title": "Dance Party",
+        "description": "Music starts and the celebration begins."
+      },
+      "cake": {
+        "time": "22:00",
+        "title": "Wedding Cake",
+        "description": "Ceremonial cutting of the cake."
+      },
+      "midnight": {
+        "time": "00:00",
+        "title": "Traditional Games",
+        "description": "Traditional Polish wedding games (Oczepiny)."
+      }
+    }
+  },
+  "Gallery": {
+    "headerSubtitle": "Memories",
+    "headerTitle": "Our Photos",
+    "description": "We would like to keep these moments forever. We would be happy if you could share your photos from this day with us!",
+    "descriptionExtra": "Help us capture these beautiful moments. All the photos you take during the wedding can be shared in our common album.",
+    "cta": "Google Drive",
+    "sideLabel": "Digital Memories • Shared Forever"
+  },
+  "FAQ": {
+    "headerSubtitle": "Common Questions",
+    "headerTitle": "Learn More",
+    "questions": {
+      "accommodation": {
+        "q": "Do you provide accommodation?",
+        "a": "For guests from outside the Tri-City, we recommend hotels near Artus Court. We will be happy to help with reservations."
+      },
+      "transport": {
+        "q": "How to get from the church to the venue?",
+        "a": "The church and the wedding venue are within a short walking distance (about 5 minutes) through the historic center of Gdańsk."
+      },
+      "children": {
+        "q": "Are children invited?",
+        "a": "We invite all guests listed on the invitations. If your invitation includes children, they will be very welcome!"
+      },
+      "parking": {
+        "q": "Where to park?",
+        "a": "Artus Court is located in a pedestrian zone. We recommend parking lots at Ogarna Street or near Forum Gdańsk."
+      }
+    }
   },
   "RSVP": {
     "headerSubtitle": "Join Us",

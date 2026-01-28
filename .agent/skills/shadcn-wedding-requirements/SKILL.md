@@ -141,18 +141,22 @@ This choice informs all emotional, visual, and tonal decisions.
 
 ### 6. Page Structure & Narrative Flow
 
-The page should follow an **invitation-driven journey**:
+The page should follow an **invitation-driven journey** using the following standard sections:
 
-1. Announcement
-2. Core wedding details
-3. Personal story or context
-4. Practical information
-5. RSVP action
+1. **Hero Header:** Announcement, names, and date.
+2. **Our Story:** Personal narrative or journey.
+3. **Event Details:** Ceremony and Reception logistics.
+4. **Timeline:** Schedule of the big day.
+5. **Practical Info:** Dress code, gifts, and guest tips.
+6. **FAQ:** Common questions and answers.
+7. **Gallery:** Visual teaser or photos.
+8. **RSVP:** The final action point.
 
 Persistent elements (if access allows):
 
 - Language switcher (PL / EN)
-- Clear RSVP access
+- Sticky navigation (Scroll-to-section)
+- Simple Footer
 
 ---
 
