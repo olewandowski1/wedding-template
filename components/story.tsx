@@ -19,6 +19,7 @@ export function Story() {
           alt={t('imageAlt1')}
           width={800}
           height={600}
+          style={{ height: 'auto' }}
         />
         <p>&ldquo;{t('quote')}&rdquo;</p>
         <p>{t('historyParagraph1')}</p>
@@ -34,6 +35,7 @@ export function Story() {
           alt={t('imageAlt2')}
           width={800}
           height={600}
+          style={{ height: 'auto' }}
         />
       </div>
     </section>

@@ -18,6 +18,7 @@ export function Gallery() {
         alt='Gallery Preview'
         width={400}
         height={500}
+        style={{ height: 'auto' }}
       />
 
       <ImageIcon size={24} />

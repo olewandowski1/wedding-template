@@ -41,6 +41,7 @@ export function Details() {
               alt={event.location}
               width={800}
               height={500}
+              style={{ height: 'auto' }}
             />
             <event.icon size={24} />
             <h3>{event.title}</h3>
