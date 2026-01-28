@@ -6,9 +6,9 @@ import '@/styles/globals.css';
 import type { Metadata } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
 import { getLocale, getMessages, getTranslations } from 'next-intl/server';
-import { Cormorant_Garamond, Great_Vibes, Inter } from 'next/font/google';
+import { Geist, Great_Vibes, Inter } from 'next/font/google';
 
-const cormorant = Cormorant_Garamond({
+const cormorant = Geist({
   variable: '--font-serif',
   subsets: ['latin'],
   weight: ['300', '400', '500', '600', '700'],
@@ -46,7 +46,7 @@ export default async function RootLayout({
     <html lang={locale} suppressHydrationWarning>
       <body
         className={cn(
-          'bg-background font-sans antialiased selection:bg-gold/30 selection:text-gold-foreground',
+          'bg-background font-sans antialiased selection:bg-primary/30 selection:text-primary-foreground',
           inter.variable,
           cormorant.variable,
           handwritten.variable,

@@ -34,8 +34,8 @@ function WeddingLogo() {
       >
         <path
           d='M50 30 C 50 20, 15 20, 15 45 C 15 70, 50 85, 50 85 C 50 85, 85 70, 85 45 C 85 20, 50 20, 50 30'
-          fill='#c5a028'
-          stroke='#c5a028'
+          fill='#18181b'
+          stroke='#18181b'
           strokeWidth='2'
         />
         <path
@@ -71,8 +71,8 @@ export default async function OpenGraphImage() {
         justifyContent: 'center',
         padding: 80,
         position: 'relative',
-        backgroundColor: '#fafaf9',
-        color: '#1c1917',
+        backgroundColor: '#f4f4f5',
+        color: '#18181b',
       }}
     >
       {/* Background Gradient */}
@@ -84,7 +84,7 @@ export default async function OpenGraphImage() {
           right: 0,
           bottom: 0,
           backgroundImage:
-            'radial-gradient(circle at center, #ffffff 0%, #fafaf9 100%)',
+            'radial-gradient(circle at center, #ffffff 0%, #f4f4f5 100%)',
         }}
       />
 
@@ -96,7 +96,7 @@ export default async function OpenGraphImage() {
           left: 40,
           right: 40,
           bottom: 40,
-          border: '1px solid rgba(197, 160, 40, 0.3)',
+          border: '1px solid rgba(24, 24, 27, 0.3)',
           display: 'flex',
         }}
       />
@@ -107,7 +107,7 @@ export default async function OpenGraphImage() {
           left: 50,
           right: 50,
           bottom: 50,
-          border: '2px solid #c5a028',
+          border: '2px solid #18181b',
           display: 'flex',
         }}
       />
@@ -120,8 +120,8 @@ export default async function OpenGraphImage() {
           left: 35,
           width: 60,
           height: 60,
-          borderTop: '4px solid #c5a028',
-          borderLeft: '4px solid #c5a028',
+          borderTop: '4px solid #18181b',
+          borderLeft: '4px solid #18181b',
         }}
       />
       <div
@@ -131,8 +131,8 @@ export default async function OpenGraphImage() {
           right: 35,
           width: 60,
           height: 60,
-          borderTop: '4px solid #c5a028',
-          borderRight: '4px solid #c5a028',
+          borderTop: '4px solid #18181b',
+          borderRight: '4px solid #18181b',
         }}
       />
       <div
@@ -142,8 +142,8 @@ export default async function OpenGraphImage() {
           left: 35,
           width: 60,
           height: 60,
-          borderBottom: '4px solid #c5a028',
-          borderLeft: '4px solid #c5a028',
+          borderBottom: '4px solid #18181b',
+          borderLeft: '4px solid #18181b',
         }}
       />
       <div
@@ -153,8 +153,8 @@ export default async function OpenGraphImage() {
           right: 35,
           width: 60,
           height: 60,
-          borderBottom: '4px solid #c5a028',
-          borderRight: '4px solid #c5a028',
+          borderBottom: '4px solid #18181b',
+          borderRight: '4px solid #18181b',
         }}
       />
 
@@ -166,7 +166,7 @@ export default async function OpenGraphImage() {
           letterSpacing: '0.2em',
           textTransform: 'uppercase',
           marginBottom: 20,
-          color: '#c5a028',
+          color: '#18181b',
           fontFamily: 'Playfair Display',
           zIndex: 2,
         }}
@@ -182,7 +182,7 @@ export default async function OpenGraphImage() {
           textAlign: 'center',
           lineHeight: 1.1,
           zIndex: 2,
-          color: '#1c1917',
+          color: '#18181b',
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
@@ -195,7 +195,7 @@ export default async function OpenGraphImage() {
         style={{
           width: 100,
           height: 2,
-          background: '#c5a028',
+          background: '#18181b',
           marginBottom: 30,
           zIndex: 2,
         }}
@@ -203,14 +203,14 @@ export default async function OpenGraphImage() {
 
       <div
         style={{
-          fontSize: 28,
+          fontSize: 22,
           maxWidth: 900,
           textAlign: 'center',
           lineHeight: 1.6,
           zIndex: 2,
           fontFamily: 'Playfair Display',
           fontStyle: 'italic',
-          color: '#444',
+          color: '#52525b',
         }}
       >
         {t('description')}

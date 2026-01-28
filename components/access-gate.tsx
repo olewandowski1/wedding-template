@@ -1,8 +1,9 @@
 'use client';
 
+import { CircleAlertIcon } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/navigation';
 import { useActionState, useEffect, useState } from 'react';
-import { useTranslations } from 'next-intl';
 
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import {
@@ -18,7 +19,6 @@ import {
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { CircleAlertIcon } from 'lucide-react';
 
 type UnlockState = {
   status: 'idle' | 'error' | 'success';
@@ -58,33 +58,17 @@ export function AccessGate({ unlockAction }: AccessGateProps) {
   return (
     <AlertDialog open={open} onOpenChange={setOpen}>
       <AlertDialogTrigger asChild>
-        <Button
-          variant='outline'
-          size='lg'
-          className='bg-transparent text-white border-white hover:bg-white hover:text-black rounded-none px-8 py-4 text-xs tracking-widest uppercase transition-all duration-500 md:px-12 md:py-6 md:text-sm'
-        >
-          {t('trigger')}
-        </Button>
+        <Button>{t('trigger')}</Button>
       </AlertDialogTrigger>
-      <AlertDialogContent className='bg-background/95 border-border/60 ring-1 ring-black/5 shadow-2xl p-6 sm:p-8 max-w-md gap-6'>
-        <form action={formAction} className='grid gap-6'>
-          <AlertDialogHeader className='gap-3'>
-            <AlertDialogTitle className='flex flex-col items-start gap-2 text-left'>
-              <p className='font-handwritten text-3xl sm:text-4xl text-foreground/90'>
-                {t('title')}
-              </p>
-              <div className='h-px w-24 bg-foreground/20' />
-            </AlertDialogTitle>
-            <AlertDialogDescription className='text-sm text-foreground/70 text-left'>
-              {t('description')}{' '}
-              <span className='font-semibold'>{t('passwordInfo')}</span>
-            </AlertDialogDescription>
+      <AlertDialogContent>
+        <form action={formAction}>
+          <AlertDialogHeader>
+            <AlertDialogTitle>{t('title')}</AlertDialogTitle>
+            <AlertDialogDescription>{t('description')}</AlertDialogDescription>
           </AlertDialogHeader>
 
-          <div className='grid gap-3'>
-            <Label htmlFor='access-key' className='text-sm font-medium'>
-              {t('passwordLabel')}
-            </Label>
+          <div>
+            <Label htmlFor='access-key'>{t('passwordLabel')}</Label>
             <Input
               id='access-key'
               name='accessKey'
@@ -92,20 +76,18 @@ export function AccessGate({ unlockAction }: AccessGateProps) {
               autoComplete='current-password'
               required
             />
-            {state.status === 'error' ? (
+            {state.status === 'error' && state.message && (
               <Alert variant='error'>
                 <CircleAlertIcon />
-                <AlertTitle>{state.message?.title}</AlertTitle>
-                <AlertDescription>{state.message?.detail}</AlertDescription>
+                <AlertTitle>{state.message.title}</AlertTitle>
+                <AlertDescription>{state.message.detail}</AlertDescription>
               </Alert>
-            ) : null}
+            )}
           </div>
 
-          <AlertDialogFooter className='gap-3'>
-            <AlertDialogCancel size='lg' disabled={isPending}>
-              {t('cancel')}
-            </AlertDialogCancel>
-            <Button type='submit' size='lg' disabled={isPending}>
+          <AlertDialogFooter>
+            <AlertDialogCancel>{t('cancel')}</AlertDialogCancel>
+            <Button type='submit' disabled={isPending}>
               {isPending ? t('checking') : t('unlock')}
             </Button>
           </AlertDialogFooter>

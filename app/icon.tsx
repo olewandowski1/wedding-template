@@ -17,14 +17,14 @@ export default function Icon() {
         justifyContent: 'center',
         background: 'white',
         borderRadius: '20%',
-        border: '1px solid #c5a028',
+        border: '1px solid #18181b',
       }}
     >
       <svg width='24' height='24' viewBox='0 0 100 100' fill='none'>
         <path
           d='M50 30 C 50 20, 15 20, 15 45 C 15 70, 50 85, 50 85 C 50 85, 85 70, 85 45 C 85 20, 50 20, 50 30'
-          fill='#c5a028'
-          stroke='#c5a028'
+          fill='#18181b'
+          stroke='#18181b'
           strokeWidth='6'
           strokeLinecap='round'
           strokeLinejoin='round'
