@@ -1,6 +1,7 @@
 {
-  "name": "wedding--elegant-template",
+  "name": "wedding-foundation",
   "version": "1.0.0",
+  "description": "A reusable starter kit for building high-quality wedding websites of any style.",
   "private": true,
   "scripts": {
     "dev": "next dev",

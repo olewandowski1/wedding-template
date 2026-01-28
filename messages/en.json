@@ -1,206 +1,165 @@
 {
   "Hero": {
     "invitation": "Wedding Invitation",
-    "names": "Marzena & Wojciech",
-    "date": "June 20, 2028 - Gdańsk",
-    "rsvp": "Confirm attendance"
+    "names": "Couple Names",
+    "date": "Date - Location",
+    "rsvp": "Confirm Attendance"
   },
   "AccessGate": {
     "trigger": "Get Access",
-    "title": "Marzena & Wojciech",
-    "description": "This is a private invitation. Please enter the password to access the site.",
+    "title": "Couple Names",
+    "description": "This is a private invitation. Please enter the password.",
     "passwordInfo": "The password was sent with the invitation.",
     "passwordLabel": "Password",
-    "cancel": "Back",
+    "cancel": "Go back",
     "checking": "Checking...",
     "unlock": "Unlock"
   },
   "Details": {
-    "headerSubtitle": "Place and Time",
-    "headerTitle": "Celebration",
+    "headerTitle": "The Celebration",
     "ceremony": {
       "title": "Wedding Ceremony",
-      "location": "St. Mary's Basilica",
-      "description": "The oldest and most beautiful temple in Gdańsk, where we will make our vows."
+      "location": "Venue Name",
+      "description": "Ceremony description."
     },
     "reception": {
       "title": "Wedding Reception",
-      "location": "Artus Court",
-      "description": "We invite you to a joint celebration full of music, dance, and joy."
-    },
-    "getDirections": "Get Directions"
+      "location": "Venue Name",
+      "description": "Reception description."
+    }
   },
   "Footer": {
-    "names": "Marzena & Wojciech",
-    "location": "Gdańsk, Poland"
+    "names": "Couple Names",
+    "location": "City, Country"
   },
   "InfoSection": {
-    "headerSubtitle": "Important Tips",
     "headerTitle": "For Guests",
     "dressCode": {
       "title": "Dress Code",
-      "description": "It would be our pleasure if you chose elegant and formal attire for this day (Black Tie Optional)."
+      "description": "Dress code information."
     },
     "gifts": {
       "title": "Gifts",
-      "description": "Instead of flowers, we ask for support for our chosen foundation or wine for our shared cellar."
+      "description": "Gifts information."
     },
     "additionalInfo": {
-      "title": "Additional Information",
-      "description": "For guests from outside the Tri-City, we have prepared a list of recommended hotels near Artus Court."
+      "title": "Other",
+      "description": "Additional information."
     }
   },
   "Navigation": {
-    "home": "Home",
-    "story": "Our Story",
+    "story": "Story",
     "details": "Details",
-    "timeline": "Schedule",
-    "info": "Information",
-    "gallery": "Gallery",
+    "timeline": "Timeline",
     "rsvp": "RSVP"
   },
   "Timeline": {
-    "headerSubtitle": "Flow of the Day",
-    "headerTitle": "Wedding Plan",
+    "headerTitle": "Day Plan",
     "items": {
       "ceremony": {
-        "time": "16:00",
-        "title": "Wedding Ceremony",
-        "description": "Solemn Mass at St. Mary's Basilica."
+        "time": "4:00 PM",
+        "title": "Wedding",
+        "description": "Event description."
       },
       "reception": {
-        "time": "18:00",
-        "title": "Guest Welcome",
-        "description": "Arrival at Artus Court and opening toast."
+        "time": "6:00 PM",
+        "title": "Reception",
+        "description": "Event description."
       },
       "dinner": {
-        "time": "19:00",
-        "title": "Wedding Dinner",
-        "description": "Festive dinner served at the tables."
+        "time": "7:00 PM",
+        "title": "Dinner",
+        "description": "Event description."
       },
       "party": {
-        "time": "20:30",
-        "title": "Dance Party",
-        "description": "Music starts and the celebration begins."
+        "time": "8:30 PM",
+        "title": "Party",
+        "description": "Event description."
       },
       "cake": {
-        "time": "22:00",
-        "title": "Wedding Cake",
-        "description": "Ceremonial cutting of the cake."
+        "time": "10:00 PM",
+        "title": "Cake",
+        "description": "Event description."
       },
       "midnight": {
-        "time": "00:00",
-        "title": "Traditional Games",
-        "description": "Traditional Polish wedding games (Oczepiny)."
+        "time": "12:00 AM",
+        "title": "Midnight Snack",
+        "description": "Event description."
       }
     }
   },
-  "Gallery": {
-    "headerSubtitle": "Memories",
-    "headerTitle": "Our Photos",
-    "description": "We would like to keep these moments forever. We would be happy if you could share your photos from this day with us!",
-    "descriptionExtra": "Help us capture these beautiful moments. All the photos you take during the wedding can be shared in our common album.",
-    "cta": "Google Drive",
-    "sideLabel": "Digital Memories • Shared Forever"
-  },
   "FAQ": {
-    "headerSubtitle": "Common Questions",
-    "headerTitle": "Learn More",
-    "questions": {
+    "headerTitle": "Q&A",
+    "items": {
       "accommodation": {
-        "q": "Do you provide accommodation?",
-        "a": "For guests from outside the Tri-City, we recommend hotels near Artus Court. We will be happy to help with reservations."
+        "question": "Accommodation?",
+        "answer": "Accommodation description."
       },
       "transport": {
-        "q": "How to get from the church to the venue?",
-        "a": "The church and the wedding venue are within a short walking distance (about 5 minutes) through the historic center of Gdańsk."
+        "question": "Transport?",
+        "answer": "Transport description."
       },
       "children": {
-        "q": "Are children invited?",
-        "a": "We invite all guests listed on the invitations. If your invitation includes children, they will be very welcome!"
+        "question": "Children?",
+        "answer": "Information about kids."
       },
       "parking": {
-        "q": "Where to park?",
-        "a": "Artus Court is located in a pedestrian zone. We recommend parking lots at Ogarna Street or near Forum Gdańsk."
+        "question": "Parking?",
+        "answer": "Information about parking."
       }
     }
   },
   "RSVP": {
-    "headerSubtitle": "Join Us",
     "headerTitle": "RSVP",
-    "deadline": "We would be very pleased if you confirm your attendance by April 20, 2028.",
-    "footerText": "We can't wait to see you!",
-    "success": {
-      "title": "THANK YOU!",
-      "message1": "Your confirmation has been sent.",
-      "message2": "See you in Gdańsk!",
-      "resetButton": "Fill again"
-    },
+    "headerSubtitle": "Please confirm your presence",
     "form": {
-      "fullNameLabel": "Full Name",
-      "fullNamePlaceholder": "e.g. John Doe",
-      "emailLabel": "Email Address",
-      "emailPlaceholder": "e.g. john@doe.com",
-      "plusOneLabel": "Plus One (optional)",
-      "plusOnePlaceholder": "e.g. Jane Doe",
-      "attendanceLabel": "Attendance Confirmation",
-      "attendanceYes": "Yes, with pleasure!",
-      "attendanceNo": "Unfortunately, I can't make it...",
-      "messageLabel": "Your Message (optional)",
-      "messagePlaceholder": "If you would like to tell us something...",
-      "submitButton": "Send Message",
-      "fullNameError": "Please provide your full name.",
-      "emailError": "Please provide a valid email address."
+      "name": "Full Name",
+      "presence": "Will you be there?",
+      "yes": "Yes",
+      "no": "No",
+      "submit": "Send"
     }
   },
   "Story": {
-    "headerSubtitle": "Our Journey Together",
-    "headerTitle": "Our History",
-    "imageAlt1": "Marzena & Wojciech by the Motława River",
-    "quote": "From the first meeting by the Motława river, to a journey together full of passion and dreams...",
-    "historyParagraph1": "It all started with a chance meeting that over time turned into the most beautiful adventure of our lives. Gdańsk, with its historical charm and sea breeze, became the backdrop for our most important moments.",
-    "historyParagraph2": "Today, enriched by hundreds of shared sunsets and thousands of hours spent talking, we stand at the threshold of a new path.",
-    "futureTitle": "Shared Future",
-    "futureParagraph1": "We invite you to celebrate together the day we say our sacramental \"I DO\". It is a great honor for us to share this joy with you — our family and friends.",
-    "futureParagraph2": "It is here, in the heart of beautiful Gdańsk, that we want to start the next chapter of our story.",
-    "imageAlt2": "Shared moments",
-    "sideLabel": "Gdańsk • June 20, 2028"
+    "headerTitle": "Our Story",
+    "quote": "Quote or motto.",
+    "historyParagraph1": "Paragraph 1.",
+    "historyParagraph2": "Paragraph 2.",
+    "futureParagraph1": "Paragraph 3.",
+    "futureParagraph2": "Paragraph 4."
   },
-  "LanguageSwitcher": {
-    "label": "Change language",
-    "pl": "Polish",
-    "en": "English"
+  "Metadata": {
+    "title": "Our Wedding Website",
+    "description": "Website description."
   },
   "Errors": {
     "rateLimit": {
       "title": "Too Many Attempts",
-      "detail": "Attempt limit reached. Please wait a few minutes and try again."
+      "detail": "Please try again later."
     },
     "missingPassword": {
-      "title": "Missing Password",
-      "detail": "Access password has not been configured. Contact the administrator."
+      "title": "Error",
+      "detail": "Password configuration missing."
     },
     "missingSecret": {
-      "title": "Missing Access Secret",
-      "detail": "WEDDING_ACCESS_SECRET is missing. Contact the administrator."
+      "title": "Error",
+      "detail": "Encryption key missing."
     },
     "passwordRequired": {
-      "title": "Password Required",
-      "detail": "Please enter the password to gain access."
+      "title": "Error",
+      "detail": "Password is required."
     },
     "invalidPassword": {
-      "title": "Invalid Password",
-      "detail": "Try again or contact the administrator."
+      "title": "Error",
+      "detail": "Invalid password."
     }
   },
-  "Metadata": {
-    "title": "Marzena & Wojciech - Wedding Website",
-    "description": "Join us as we say 'I do'! We cordially invite you to the wedding of Marzena and Wojciech in picturesque Gdansk. On this page you will find all the details of the ceremony, our story, and the RSVP form. See you there!",
-    "invitation": "Invitation"
-  },
   "NotFound": {
-    "title": "Page not found",
-    "description": "We are sorry, but the page you are looking for does not exist or has been moved. Return to the home page to continue viewing our wedding details.",
-    "backHome": "Back to Home"
+    "title": "Not Found",
+    "description": "Page does not exist.",
+    "backHome": "Go back"
+  },
+  "Gallery": {
+    "headerTitle": "Gallery"
   }
 }

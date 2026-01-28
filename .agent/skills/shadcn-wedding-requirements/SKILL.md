@@ -20,7 +20,7 @@ This is a **planning-only skill**.
 
 - The output of this skill MUST be a file named: `REQUIREMENTS.md`
 - `REQUIREMENTS.md` is the **single source of truth** for:
-  - Visual and emotional identity
+  - Visual and emotional identity (Elegant, Boho, Modern, etc.)
   - Content hierarchy and narrative flow
   - Multilanguage intent (Polish / English)
   - Privacy and access decisions
@@ -28,6 +28,8 @@ This is a **planning-only skill**.
 
 - **No further skills may proceed**
   until `REQUIREMENTS.md` is completed and approved.
+
+- This skill MUST also initialize `config/site.ts` with the basic wedding data (names, date, locale).
 
 - This skill MUST stop after producing `REQUIREMENTS.md`.
 
