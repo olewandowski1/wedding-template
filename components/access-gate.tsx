@@ -58,37 +58,54 @@ export function AccessGate({ unlockAction }: AccessGateProps) {
   return (
     <AlertDialog open={open} onOpenChange={setOpen}>
       <AlertDialogTrigger asChild>
-        <Button variant='outline'>{t('trigger')}</Button>
+        <Button
+          variant='outline'
+          size='lg'
+          className='bg-transparent text-white border-white hover:bg-white hover:text-black rounded-none px-8 py-4 text-xs tracking-widest uppercase transition-all duration-500 md:px-12 md:py-6 md:text-sm'
+        >
+          {t('trigger')}
+        </Button>
       </AlertDialogTrigger>
-      <AlertDialogContent>
-        <form action={formAction} className='space-y-4'>
-          <AlertDialogHeader>
-            <AlertDialogTitle>{t('title')}</AlertDialogTitle>
-            <AlertDialogDescription>
-              {t('description')} {t('passwordInfo')}
+      <AlertDialogContent className='bg-background/95 border-border/60 ring-1 ring-black/5 shadow-2xl p-6 sm:p-8 max-w-md gap-6'>
+        <form action={formAction} className='grid gap-6'>
+          <AlertDialogHeader className='gap-3'>
+            <AlertDialogTitle className='flex flex-col items-start gap-2 text-left'>
+              <p className='font-handwritten text-3xl sm:text-4xl text-foreground/90'>
+                {t('title')}
+              </p>
+              <div className='h-px w-24 bg-foreground/20' />
+            </AlertDialogTitle>
+            <AlertDialogDescription className='text-sm text-foreground/70 text-left'>
+              {t('description')}{' '}
+              <span className='font-semibold'>{t('passwordInfo')}</span>
             </AlertDialogDescription>
           </AlertDialogHeader>
 
-          <div className='space-y-2'>
-            <Label htmlFor='access-key'>{t('passwordLabel')}</Label>
+          <div className='grid gap-3'>
+            <Label htmlFor='access-key' className='text-sm font-medium'>
+              {t('passwordLabel')}
+            </Label>
             <Input
               id='access-key'
               name='accessKey'
               type='password'
+              autoComplete='current-password'
               required
             />
-            {state.status === 'error' && (
+            {state.status === 'error' ? (
               <Alert variant='error'>
-                <CircleAlertIcon className='h-4 w-4' />
+                <CircleAlertIcon />
                 <AlertTitle>{state.message?.title}</AlertTitle>
                 <AlertDescription>{state.message?.detail}</AlertDescription>
               </Alert>
-            )}
+            ) : null}
           </div>
 
-          <AlertDialogFooter>
-            <AlertDialogCancel disabled={isPending}>{t('cancel')}</AlertDialogCancel>
-            <Button type='submit' disabled={isPending}>
+          <AlertDialogFooter className='gap-3'>
+            <AlertDialogCancel size='lg' disabled={isPending}>
+              {t('cancel')}
+            </AlertDialogCancel>
+            <Button type='submit' size='lg' disabled={isPending}>
               {isPending ? t('checking') : t('unlock')}
             </Button>
           </AlertDialogFooter>

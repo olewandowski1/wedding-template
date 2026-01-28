@@ -1,23 +1,21 @@
-# Wedding Foundation Starter
+# Event Template
 
-A production-ready foundation for building high-quality, private, and localized wedding websites.
-This is **not** a theme you toggle at runtime; it is a **Project Skeleton** designed to be copied and customized for each specific wedding.
+Elegant and functional event website starter built with **Next.js (App Router)**, **Tailwind CSS v4**, and **shadcn/ui**.
 
-## Workflow
+This template is meticulously designed for building high-quality websites for milestone events such as:
 
-1. **Bootstrap**: Copy this repository to a new project folder.
-2. **Configure**: Update `config/site.ts` with names, dates, and locations.
-3. **Style**: Define your fonts and OKLCH color palette in `styles/globals.css` (see `docs/STYLE_GUIDE.md`).
-4. **Build**: Use the integrated **Wedding Skills** to research and build the specific UI (Boho, Modern, etc.).
+- 💍 **Weddings** – Shared stories, schedules, and registry links.
+- 🎉 **Anniversaries** – Celebratory galleries and event details.
+- 🎂 **Birthdays & Galas** – RSVPs and venue information.
+- 🤝 **Meetups & Conferences** – Speaker lists and agendas.
 
-## Core Features
+## Features
 
-- **Next.js 15 (App Router)** & **Tailwind CSS v4**.
-- **Privacy First**: Integrated `AccessGate` for password-protected private invitations.
-- **Multilingual**: Pre-configured `next-intl` (English & Polish).
-- **Smooth UX**: Native smooth scrolling and Framer Motion animations.
-- **Ready-to-use Components**: High-quality base blocks for `Hero`, `Story`, `Timeline`, etc.
-- **AI-Native**: Structured docs for AI agents to understand and build within the system.
+- **Next.js App Router** – Modern routing with server components.
+- **Tailwind CSS v4** – Next-gen CSS engine with native variables.
+- **shadcn/ui** – Elegant UI components for a polished look.
+- **Theming** – Support for light/dark modes, often useful for "mood" based event styles.
+- **Mobile First** – Designed to look great on guests' phones.
 
 ## Quick start
 
@@ -73,26 +71,14 @@ Set `FIXED_THEME` in `config/site.ts` to `'light'` or `'dark'` to lock the vibe,
 ## Project structure
 
 - `app/` – Next.js routes/layouts
-  - `app/(main)/page.tsx` – current entry page (renders the wedding sections)
+  - `app/(main)/page.tsx` – current entry page (renders `ComponentExample`)
   - `app/layout.tsx` – global layout, fonts, metadata, theme provider
-- `components/` – app components and UI blocks
+- `components/` – app components and examples
   - `components/ui/` – shared UI components (shadcn)
-- `config/site.ts` – global event details and configuration
-- `docs/` - documentation for the foundation and its components
-  - `docs/STYLE_GUIDE.md` - how to theme the template (Elegant, Boho, Modern)
-  - `docs/COMPONENTS.md` - directory of available wedding components
-- `lib/` - utility functions and business logic (access control, etc.)
-- `styles/globals.css` – Tailwind v4 entry + design tokens (OKLCH)
-- `types/` - global TypeScript definitions
-- `.agent/skills/` - AI agent skills for bootstrapping and building
+- `config/site.ts` – site name/URL/description/social handles + SEO defaults
+- `styles/globals.css` – Tailwind v4 entry + design tokens (light/dark)
 
-## Agent Skills
-
-This template is designed to be used with AI agent skills:
-
-1. **shadcn-wedding-requirements**: Define the core details of the wedding.
-2. **shadcn-wedding-component-research**: Map requirements to template components.
-3. **shadcn-wedding-ui-builder**: Implement the visual style and content.
+## Technical Reference
 
 ### Commands
 

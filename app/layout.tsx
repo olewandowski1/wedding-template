@@ -6,11 +6,23 @@ import '@/styles/globals.css';
 import type { Metadata } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
 import { getLocale, getMessages, getTranslations } from 'next-intl/server';
-import { Inter } from 'next/font/google';
+import { Cormorant_Garamond, Great_Vibes, Inter } from 'next/font/google';
+
+const cormorant = Cormorant_Garamond({
+  variable: '--font-serif',
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700'],
+});
 
 const inter = Inter({
   variable: '--font-sans',
   subsets: ['latin'],
+});
+
+const handwritten = Great_Vibes({
+  weight: '400',
+  subsets: ['latin'],
+  variable: '--font-handwritten',
 });
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -34,8 +46,10 @@ export default async function RootLayout({
     <html lang={locale} suppressHydrationWarning>
       <body
         className={cn(
-          'bg-background font-sans antialiased',
+          'bg-background font-sans antialiased selection:bg-gold/30 selection:text-gold-foreground',
           inter.variable,
+          cormorant.variable,
+          handwritten.variable,
         )}
       >
         <ThemeProvider

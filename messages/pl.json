@@ -1,14 +1,14 @@
 {
   "Hero": {
     "invitation": "Zaproszenie na ślub",
-    "names": "Imiona Pary",
-    "date": "Data - Miejsce",
+    "names": "Marzena & Wojciech",
+    "date": "20 Czerwca 2028 - Gdańsk",
     "rsvp": "Potwierdź przybycie"
   },
   "AccessGate": {
     "trigger": "Uzyskaj Dostęp",
-    "title": "Imiona Pary",
-    "description": "To prywatne zaproszenie. Proszę wprowadzić hasło.",
+    "title": "Marzena & Wojciech",
+    "description": "To prywatne zaproszenie. Proszę wprowadzić hasło, aby uzyskać dostęp do strony.",
     "passwordInfo": "Hasło zostało wysłane wraz z zaproszeniem.",
     "passwordLabel": "Hasło",
     "cancel": "Wróć",
@@ -16,150 +16,191 @@
     "unlock": "Odblokuj"
   },
   "Details": {
+    "headerSubtitle": "Miejsce i Czas",
     "headerTitle": "Uroczystość",
     "ceremony": {
       "title": "Ceremonia Zaślubin",
-      "location": "Nazwa Miejsca",
-      "description": "Opis ceremonii."
+      "location": "Bazylika Mariacka",
+      "description": "Najstarsza i najpiękniejsza świątynia w Gdańsku, gdzie złożymy naszą przysięgę."
     },
     "reception": {
       "title": "Przyjęcie Weselne",
-      "location": "Nazwa Miejsca",
-      "description": "Opis przyjęcia."
-    }
+      "location": "Dwór Artusa",
+      "description": "Zapraszamy na wspólną celebrację pełną muzyki, tańca i radości."
+    },
+    "getDirections": "Dojazd na miejsce"
   },
   "Footer": {
-    "names": "Imiona Pary",
-    "location": "Miasto, Kraj"
+    "names": "Marzena & Wojciech",
+    "location": "Gdańsk, Polska"
   },
   "InfoSection": {
+    "headerSubtitle": "Ważne Wskazówki",
     "headerTitle": "Dla Gości",
     "dressCode": {
       "title": "Dress Code",
-      "description": "Informacja o ubiorze."
+      "description": "Będzie nam miło, jeśli tego dnia wybierzecie stroje eleganckie i formalne (Black Tie Optional)."
     },
     "gifts": {
       "title": "Prezenty",
-      "description": "Informacja o prezentach."
+      "description": "Zamiast kwiatów, prosimy o wsparcie wybranej przez nas fundacji lub wino do naszej wspólnej piwniczki."
     },
     "additionalInfo": {
-      "title": "Inne",
-      "description": "Dodatkowe informacje."
+      "title": "Dodatkowe Informacje",
+      "description": "Dla gości spoza Trójmiasta przygotowaliśmy listę polecanych hoteli w pobliżu Dworca Artusa."
     }
   },
   "Navigation": {
-    "story": "Historia",
+    "home": "Start",
+    "story": "Nasza Historia",
     "details": "Szczegóły",
-    "timeline": "Program",
+    "timeline": "Harmonogram",
+    "info": "Informacje",
+    "gallery": "Galeria",
     "rsvp": "RSVP"
   },
   "Timeline": {
-    "headerTitle": "Plan Dnia",
+    "headerSubtitle": "Przebieg Dnia",
+    "headerTitle": "Plan Wesela",
     "items": {
       "ceremony": {
         "time": "16:00",
-        "title": "Ślub",
-        "description": "Opis wydarzenia."
+        "title": "Ceremonia Zaślubin",
+        "description": "Uroczysta msza św. w Bazylice Mariackiej."
       },
       "reception": {
         "time": "18:00",
-        "title": "Wesele",
-        "description": "Opis wydarzenia."
+        "title": "Przywitanie Gości",
+        "description": "Przyjazd do Dworu Artusa i toast powitalny."
       },
       "dinner": {
         "time": "19:00",
-        "title": "Obiad",
-        "description": "Opis wydarzenia."
+        "title": "Obiad Weselny",
+        "description": "Uroczysta kolacja serwowana do stołów."
       },
       "party": {
         "time": "20:30",
-        "title": "Zabawa",
-        "description": "Opis wydarzenia."
+        "title": "Zabawa Taneczna",
+        "description": "Rozpoczęcie tańców i wspólna zabawa."
       },
       "cake": {
         "time": "22:00",
-        "title": "Tort",
-        "description": "Opis wydarzenia."
+        "title": "Tort Weselny",
+        "description": "Uroczyste krojenie tortu."
       },
       "midnight": {
         "time": "00:00",
         "title": "Oczepiny",
-        "description": "Opis wydarzenia."
+        "description": "Tradycyjne polskie zabawy weselne."
       }
     }
   },
+  "Gallery": {
+    "headerSubtitle": "Wspomnienia",
+    "headerTitle": "Nasze Zdjęcia",
+    "description": "Chcielibyśmy zachować te chwile na zawsze. Będzie nam miło, jeśli podzielicie się z nami swoimi zdjęciami z tego dnia!",
+    "descriptionExtra": "Pomóżcie nam uwiecznić te piękne chwile. Wszystkie zdjęcia, które wykonacie podczas wesela, możecie udostępnić w naszym wspólnym albumie.",
+    "cta": "Google Drive",
+    "sideLabel": "Cyfrowe Wspomnienia • Na Zawsze"
+  },
   "FAQ": {
-    "headerTitle": "Pytania i Odpowiedzi",
-    "items": {
+    "headerSubtitle": "Częste Pytania",
+    "headerTitle": "Dowiedz się więcej",
+    "questions": {
       "accommodation": {
-        "question": "Nocleg?",
-        "answer": "Opis noclegu."
+        "q": "Czy zapewniacie nocleg?",
+        "a": "Dla gości spoza Trójmiasta polecamy hotele w pobliżu Dworu Artusa. Chętnie pomożemy w dokonaniu rezerwacji."
       },
       "transport": {
-        "question": "Transport?",
-        "answer": "Opis transportu."
+        "q": "Jak dojechać z kościoła na salę?",
+        "a": "Kościół i sala weselna znajdują się w odległości krótkiego spaceru (ok. 5 minut) przez historyczne centrum Gdańska."
       },
       "children": {
-        "question": "Dzieci?",
-        "answer": "Informacja o dzieciach."
+        "q": "Czy dzieci są zaproszone?",
+        "a": "Zapraszamy wszystkich gości wymienionych na zaproszeniach. Jeśli Twoje zaproszenie obejmuje dzieci, będą one bardzo mile widziane!"
       },
       "parking": {
-        "question": "Parking?",
-        "answer": "Informacja o parkingu."
+        "q": "Gdzie zaparkować samochód?",
+        "a": "Dwór Artusa znajduje się w strefie pieszej. Rekomendujemy parkingi przy ul. Ogarna lub w pobliżu Forum Gdańsk."
       }
     }
   },
   "RSVP": {
+    "headerSubtitle": "Bądźcie z Nami",
     "headerTitle": "RSVP",
-    "headerSubtitle": "Prosimy o potwierdzenie",
+    "deadline": "Będzie nam bardzo miło, jeśli potwierdzisz swoją obecność do dnia 20.04.2028.",
+    "footerText": "Nie możemy się doczekać spotkania z Wami!",
+    "success": {
+      "title": "DZIĘKUJEMY!",
+      "message1": "Twoje potwierdzenie zostało wysłane.",
+      "message2": "Do zobaczenia w Gdańsku!",
+      "resetButton": "Wypełnij ponownie"
+    },
     "form": {
-      "name": "Imię i Nazwisko",
-      "presence": "Czy będziesz?",
-      "yes": "Tak",
-      "no": "Nie",
-      "submit": "Wyślij"
+      "fullNameLabel": "Imię i Nazwisko",
+      "fullNamePlaceholder": "np. Jan Kowalski",
+      "emailLabel": "Adres E-mail",
+      "emailPlaceholder": "np. jan@kowalski.pl",
+      "plusOneLabel": "Osoba Towarzysząca (opcjonalnie)",
+      "plusOnePlaceholder": "np. Anna Nowak",
+      "attendanceLabel": "Potwierdzenie obecności",
+      "attendanceYes": "Tak, z przyjemnością!",
+      "attendanceNo": "Niestety nie mogę...",
+      "messageLabel": "Twoja wiadomość (opcjonalnie)",
+      "messagePlaceholder": "Jeśli chcesz nam coś przekazać...",
+      "submitButton": "Wyślij Wiadomość",
+      "fullNameError": "Proszę podać imię i nazwisko.",
+      "emailError": "Proszę podać poprawny adres e-mail."
     }
   },
   "Story": {
+    "headerSubtitle": "Nasza Wspólna Droga",
     "headerTitle": "Nasza Historia",
-    "quote": "Cytat lub motto.",
-    "historyParagraph1": "Paragraf 1.",
-    "historyParagraph2": "Paragraf 2.",
-    "futureParagraph1": "Paragraf 3.",
-    "futureParagraph2": "Paragraf 4."
+    "imageAlt1": "Marzena & Wojciech nad Motławą",
+    "quote": "Od pierwszego spotkania nad brzegiem Motławy, po wspólną drogę pełną pasji i marzeń...",
+    "historyParagraph1": "Wszystko zaczęło się od przypadkowego spotkania, które z czasem przerodziło się w najpiękniejszą przygodę naszego życia. Gdańsk, z jego historycznym urokiem i morską bryzą, stał się tłem dla naszych najważniejszych chwil.",
+    "historyParagraph2": "Dziś, bogatsi o setki wspólnych zachodów słońca i tysiące przegadanych godzin, stajemy u progu nowej drogi.",
+    "futureTitle": "Wspólna Przyszłość",
+    "futureParagraph1": "Zapraszamy Was do wspólnego świętowania dnia, w którym wypowiemy sakramentalne \"TAK\". To dla nas ogromny zaszczyt, że możemy dzielić tę radość właśnie z Wami — naszą rodziną i przyjaciółmi.",
+    "futureParagraph2": "To tutaj, w sercu pięknego Gdańska, chcemy rozpocząć kolejny rozdział naszej historii.",
+    "imageAlt2": "Wspólne chwile",
+    "sideLabel": "Gdańsk • 20 Czerwca 2028"
   },
-  "Metadata": {
-    "title": "Nasza Strona Ślubna",
-    "description": "Opis strony."
+  "LanguageSwitcher": {
+    "label": "Zmień język",
+    "pl": "Polski",
+    "en": "Angielski"
   },
   "Errors": {
     "rateLimit": {
       "title": "Zbyt Wiele Prób",
-      "detail": "Spróbuj później."
+      "detail": "Przekroczono limit prób. Odczekaj kilka minut i spróbuj ponownie."
     },
     "missingPassword": {
-      "title": "Błąd",
-      "detail": "Brak konfiguracji hasła."
+      "title": "Brak Ustawionego Hasła",
+      "detail": "Hasło dostępu nie zostało skonfigurowane. Skontaktuj się z administratorem."
     },
     "missingSecret": {
-      "title": "Błąd",
-      "detail": "Brak klucza szyfrowania."
+      "title": "Brak Sekretu Dostępu",
+      "detail": "Brakuje WEDDING_ACCESS_SECRET. Skontaktuj się z administratorem."
     },
     "passwordRequired": {
-      "title": "Błąd",
-      "detail": "Wprowadź hasło."
+      "title": "Hasło Wymagane",
+      "detail": "Proszę wprowadzić hasło, aby uzyskać dostęp."
     },
     "invalidPassword": {
-      "title": "Błąd",
-      "detail": "Nieprawidłowe hasło."
+      "title": "Nieprawidłowe Hasło",
+      "detail": "Spróbuj ponownie lub skontaktuj się z administratorem."
     }
   },
-  "NotFound": {
-    "title": "Nie znaleziono",
-    "description": "Strona nie istnieje.",
-    "backHome": "Wróć"
+  "Metadata": {
+    "title": "Marzena & Wojciech - Strona Ślubna",
+    "description": "Bądźcie z nami, gdy powiemy sobie \"Tak\"! Serdecznie zapraszamy na ślub i wesele Marzeny i Wojciecha w malowniczym Gdańsku. Na tej stronie znajdziecie wszystkie szczegóły uroczystości, naszą wspólną historię oraz formularz potwierdzenia przybycia. Do zobaczenia!",
+    "invitation": "Zaproszenie"
   },
-  "Gallery": {
-    "headerTitle": "Galeria"
+  "NotFound": {
+    "title": "Nie znaleziono strony",
+    "description": "Przepraszamy, ale strona, której szukasz, nie istnieje lub została przeniesiona. Wróć na stronę główną, aby kontynuować przeglądanie szczegółów naszego ślubu.",
+    "backHome": "Wróć do strony głównej"
   }
 }

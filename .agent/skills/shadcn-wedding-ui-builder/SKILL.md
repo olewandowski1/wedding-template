@@ -33,12 +33,11 @@ This skill does **not** optimize for SEO, marketing, or discoverability.
 Before writing any code, the builder MUST:
 
 1. Read the repository template
-2. Read `docs/STYLE_GUIDE.md` and `docs/COMPONENTS.md`
-3. Understand:
+2. Understand:
    - Folder structure
    - Existing component conventions
-   - Styling and theming approach (OKLCH tokens)
-4. Respect all existing patterns
+   - Styling and theming approach
+3. Respect all existing patterns
 
 ❗ No new architectural patterns or directories may be introduced.
 

@@ -1,19 +1,260 @@
 'use client';
 
+import { siteConfig } from '@/config/site';
+import { cn } from '@/lib/utils';
+import { AnimatePresence, motion, useScroll } from 'motion/react';
 import { useTranslations } from 'next-intl';
+import { LanguageSwitcher } from './language-switcher';
+import Link from 'next/link';
+import * as React from 'react';
 
 export function Navigation() {
   const t = useTranslations('Navigation');
+  const navRoutes = [
+    { name: t('home'), href: '#hero' },
+    { name: t('story'), href: '#story' },
+    { name: t('details'), href: '#details' },
+    { name: t('timeline'), href: '#timeline' },
+    { name: t('info'), href: '#info' },
+    { name: t('gallery'), href: '#gallery' },
+    { name: t('rsvp'), href: '#rsvp' },
+  ];
+  const [isOpen, setIsOpen] = React.useState(false);
+  const [activeSection, setActiveSection] = React.useState('hero');
+  const [scrolled, setScrolled] = React.useState(false);
+  const { scrollY } = useScroll();
+  const navRef = React.useRef<HTMLElement | null>(null);
+  const sectionIds = React.useMemo(
+    () => siteConfig.NAV_ROUTES.map((route) => route.href.replace('#', '')),
+    [],
+  );
+  const isAutoScrollingRef = React.useRef(false);
+  const autoScrollTimeoutRef = React.useRef<ReturnType<
+    typeof setTimeout
+  > | null>(null);
+
+  React.useEffect(() => {
+    return scrollY.on('change', (latest) => {
+      setScrolled(latest > 50);
+    });
+  }, [scrollY]);
+
+  const scrollToSection = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string,
+  ) => {
+    e.preventDefault();
+    const id = href.replace('#', '');
+    const element = document.getElementById(id);
+    if (element) {
+      if (autoScrollTimeoutRef.current) {
+        clearTimeout(autoScrollTimeoutRef.current);
+      }
+      isAutoScrollingRef.current = true;
+      const offset = (navRef.current?.offsetHeight ?? 0) + 16;
+      const top = element.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top, behavior: 'smooth' });
+      setIsOpen(false);
+      setActiveSection(id);
+      window.history.replaceState(null, '', href);
+      autoScrollTimeoutRef.current = setTimeout(() => {
+        isAutoScrollingRef.current = false;
+      }, 700);
+    }
+  };
+
+  const updateActiveSection = React.useCallback(() => {
+    if (isAutoScrollingRef.current) return;
+    const offset = (navRef.current?.offsetHeight ?? 0) + 24;
+    let current = sectionIds[0];
+
+    sectionIds.forEach((id) => {
+      const element = document.getElementById(id);
+      if (!element) return;
+
+      const top = element.getBoundingClientRect().top;
+      if (top - offset <= 0) {
+        current = id;
+      }
+    });
+
+    setActiveSection(current);
+  }, [sectionIds]);
+
+  React.useEffect(() => {
+    if (isAutoScrollingRef.current) return;
+    const newHash = `#${activeSection}`;
+    if (window.location.hash !== newHash) {
+      window.history.replaceState(null, '', newHash);
+    }
+  }, [activeSection]);
+
+  React.useEffect(() => {
+    // Set initial active section from hash if present
+    const hash = window.location.hash.replace('#', '');
+    if (hash && sectionIds.includes(hash)) {
+      setActiveSection(hash);
+      const element = document.getElementById(hash);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+    }
+
+    let rafId = 0;
+    const onScroll = () => {
+      if (rafId) return;
+      rafId = window.requestAnimationFrame(() => {
+        updateActiveSection();
+        rafId = 0;
+      });
+    };
+
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+
+    return () => {
+      if (rafId) window.cancelAnimationFrame(rafId);
+      window.removeEventListener('scroll', onScroll);
+      window.removeEventListener('resize', onScroll);
+      if (autoScrollTimeoutRef.current) {
+        clearTimeout(autoScrollTimeoutRef.current);
+      }
+    };
+  }, [sectionIds, updateActiveSection]);
 
   return (
-    <nav className='sticky top-0 z-50 bg-white/80 backdrop-blur border-b py-4 px-8 flex justify-between items-center'>
-      <div className='font-bold text-xl'>Wedding</div>
-      <div className='flex gap-6 text-sm font-medium'>
-        <a href='#story'>{t('story')}</a>
-        <a href='#details'>{t('details')}</a>
-        <a href='#timeline'>{t('timeline')}</a>
-        <a href='#rsvp'>{t('rsvp')}</a>
+    <motion.nav
+      ref={navRef}
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.8, ease: 'easeOut' }}
+      className={cn('fixed top-0 z-50 w-full transition-all duration-700', {
+        'bg-background/95 backdrop-blur-md py-4 sm:py-6': scrolled,
+        'bg-white py-4 sm:py-6': !scrolled && isOpen,
+        'bg-transparent py-6 sm:py-10 md:py-16.5': !scrolled && !isOpen,
+      })}
+    >
+      <div className='container mx-auto flex items-center justify-end lg:justify-center px-6 md:px-12'>
+        {/* Desktop Nav - Left */}
+        <div className='hidden items-center lg:flex space-x-8 xl:space-x-12'>
+          {navRoutes.map((route) => {
+            const isActive = activeSection === route.href.replace('#', '');
+            return (
+              <Link
+                key={route.href}
+                href={route.href}
+                onClick={(e) => scrollToSection(e, route.href)}
+                className={cn(
+                  'relative text-[10px] font-medium uppercase tracking-[0.5em] transition-all duration-500',
+                  {
+                    'text-foreground': scrolled && isActive,
+                    'text-foreground/70 hover:text-foreground':
+                      scrolled && !isActive,
+                    'text-white': !scrolled && isActive,
+                    'text-white/80 hover:text-white': !scrolled && !isActive,
+                  },
+                )}
+              >
+                {route.name}
+                {isActive && (
+                  <motion.span
+                    layoutId='activeNav'
+                    className={cn('absolute -bottom-2 left-0 h-px w-full', {
+                      'bg-foreground': scrolled,
+                      'bg-white': !scrolled,
+                    })}
+                    transition={{ type: 'spring', stiffness: 380, damping: 30 }}
+                  />
+                )}
+              </Link>
+            );
+          })}
+        </div>
+
+        {/* Right side - Mobile button */}
+        <div className='flex items-center gap-8'>
+          <div className='lg:hidden'>
+            <button
+              type='button'
+              className='relative z-50 p-2'
+              onClick={() => setIsOpen(!isOpen)}
+              aria-label='Toggle menu'
+              aria-expanded={isOpen}
+              aria-controls='mobile-nav'
+            >
+              <div className='flex flex-col space-y-1.5'>
+                <span
+                  className={cn('h-px w-6 transition-all', {
+                    'bg-foreground': scrolled || isOpen,
+                    'bg-white': !scrolled && !isOpen,
+                    'translate-y-2 rotate-45': isOpen,
+                  })}
+                />
+                <span
+                  className={cn('h-px w-6 transition-all', {
+                    'bg-foreground': scrolled || isOpen,
+                    'bg-white': !scrolled && !isOpen,
+                    'opacity-0': isOpen,
+                  })}
+                />
+                <span
+                  className={cn('h-px w-6 transition-all', {
+                    'bg-foreground': scrolled || isOpen,
+                    'bg-white': !scrolled && !isOpen,
+                    '-translate-y-2 -rotate-45': isOpen,
+                  })}
+                />
+              </div>
+            </button>
+          </div>
+        </div>
       </div>
-    </nav>
+
+      {/* Mobile/Tablet Nav */}
+      <AnimatePresence initial={false}>
+        {isOpen && (
+          <>
+            <motion.div
+              className='fixed inset-0 z-40 bg-white lg:hidden'
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setIsOpen(false)}
+            />
+            <motion.div
+              id='mobile-nav'
+              className='absolute left-0 right-0 top-full z-50 origin-top overflow-hidden bg-white lg:hidden'
+              initial={{ opacity: 0, y: -12, scaleY: 0.98 }}
+              animate={{ opacity: 1, y: 0, scaleY: 1 }}
+              exit={{ opacity: 0, y: -8, scaleY: 0.98 }}
+              transition={{ duration: 0.2, ease: 'easeOut' }}
+            >
+              <div className='flex flex-col gap-4 px-6 py-8'>
+                {navRoutes.map((route, index) => (
+                  <Link
+                    key={route.href}
+                    href={route.href}
+                    onClick={(e) => scrollToSection(e, route.href)}
+                    className='group flex items-center justify-between font-serif text-xl tracking-[0.2em] text-foreground transition-all hover:opacity-60'
+                  >
+                    <span>{route.name}</span>
+                    <span className='text-xs uppercase tracking-[0.35em] text-foreground/70 group-hover:text-foreground/90'>
+                      {String(index + 1).padStart(2, '0')}
+                    </span>
+                  </Link>
+                ))}
+
+                <div className='mt-12 flex justify-center pt-12 border-t border-foreground/5'>
+                  <LanguageSwitcher scrolled={true} />
+                </div>
+              </div>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
+    </motion.nav>
   );
 }
