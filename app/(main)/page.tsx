@@ -81,6 +81,7 @@ async function unlockAccess(
   _prevState: UnlockState,
   formData: FormData,
 ): Promise<UnlockState> {
+  'use server';
   const t = await getTranslations('Errors');
 
   const isLimited = await isRateLimited();
