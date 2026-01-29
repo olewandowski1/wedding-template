@@ -20,13 +20,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 
-type UnlockState = {
-  status: 'idle' | 'error' | 'success';
-  message?: {
-    title: string;
-    detail: string;
-  };
-};
+import { type UnlockState } from '@/lib/access';
 
 type UnlockAction = (
   prevState: UnlockState,
